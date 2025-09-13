@@ -1,0 +1,12 @@
+#plugin_manager H3 {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+#plugin_manager .plugins {
+	FLOAT: none
+}
+#plugin_manager .pm_info {
+	FLOAT: none
+}
+#plugin_manager .plugins {
+	MARGIN-BOTTOM: 1em
+}

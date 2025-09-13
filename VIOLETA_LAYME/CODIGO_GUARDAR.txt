@@ -1,0 +1,91 @@
+AGREGAR
+
+       cboNombres.Items.Add(txtNom.Text)
+        lstNombres.Items.Add(txtNom.Text)
+        txtNom.Text = " "
+
+
+SELECCIONAR
+txtSeleccionado.Text = lstNombres.GetItemText(lstNombres.SelectedItem)
+
+
+
+BUSCAR
+Dim file As Streamreader = New StreamReader("d:\vstudio.net\violeta_layme\prueba\cliente.txt")
+        Dim line As String
+        Dim i As Integer
+        Dim x, z As String
+        line = file.ReadLine
+        While line <> Nothing
+            i = 1
+            Do
+                x = Mid(line, i, 1)
+                If x = "/" Then
+                    Exit Do
+                End If
+                z = z & x
+                i = i + 1
+            Loop
+            If z = txtRut.Text Then
+                i = i + 1
+                z = ""
+                Do
+                    x = Mid(line, i, 1)
+                    If x = "/" Then
+                        Lblnombre.Text = z
+                        Exit Do
+                    End If
+                    z = z & x
+                    i = i + 1
+                Loop
+                i = i + 1
+                z = ""
+                Do
+                    x = Mid(line, i, 1)
+                    If x = "/" Then
+                        Lbldireccion.Text = z
+                        Exit Do
+                    End If
+                    z = z & x
+                    i = i + 1
+                Loop
+                i = i + 1
+                z = ""
+                Do
+                    x = Mid(line, i, 1)
+                    If x = "/" Then
+                        Lblcomuna.Text = z
+                        Exit Do
+                    End If
+                    z = z & x
+                    i = i + 1
+                Loop
+                i = i + 1
+                z = ""
+                Exit While
+            End If
+            line = file.ReadLine
+            z = ""
+        End While
+
+
+
+AGREGAR
+
+
+Dim mat(10, 5) As Integer
+        Dim agregar As SaveFileDialog = New SaveFileDialog
+        Dim line As String
+        agregar= Txtrut.text(TextTxtnombre.Text & "/" & Txtdireccion.Text & "/" & Txtcomuna.Text & "/"
+
+        agregar.Filter = ("f:\vstudio.net\violeta_layme\prueba\cliente.txt")
+
+        Close()
+        MessageBox.Show("Los datos Fueron grabados exitosamente", " Aviso")
+        Me.Finalize()
+
+
+
+
+
+AGERGAR AL FORMULARIO

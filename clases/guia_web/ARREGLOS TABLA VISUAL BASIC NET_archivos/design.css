@@ -1,0 +1,336 @@
+ {
+	FONT-SIZE: small; FONT-FAMILY: Verdana, Helvetica, Arial, sans-serif
+}
+BODY {
+	BACKGROUND: #ffffff
+}
+#header {
+	
+}
+#headerprepend {
+	
+}
+#headerappend {
+	
+}
+#searchform INPUT {
+	BORDER-RIGHT: #791e1e 1px solid; BORDER-TOP: #791e1e 1px solid; BACKGROUND: url(images/search_icon.gif) #fff no-repeat; BORDER-LEFT: #791e1e 1px solid; BORDER-BOTTOM: #791e1e 1px solid
+}
+#searchform .button {
+	FONT-WEIGHT: bold; BACKGROUND: #b9b997; COLOR: #791e1e
+}
+#searchform .button:hover {
+	BACKGROUND: #999966
+}
+#qsearch_out {
+	BORDER-RIGHT: #791e1e 1px solid; BORDER-TOP: #791e1e 1px solid; BACKGROUND: #fff; BORDER-LEFT: #791e1e 1px solid; BORDER-BOTTOM: #791e1e 1px solid
+}
+#qsearch_out A {
+	COLOR: #791e1e; TEXT-DECORATION: none
+}
+#navigation LI A {
+	BORDER-RIGHT: #791e1e 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #791e1e 1px solid; PADDING-LEFT: 6px; FONT-WEIGHT: bold; FONT-SIZE: 1em; BACKGROUND: #b9b997; PADDING-BOTTOM: 2px; BORDER-LEFT: #791e1e 1px solid; COLOR: #791e1e; PADDING-TOP: 1px; BORDER-BOTTOM: #791e1e 1px solid; FONT-VARIANT: small-caps; TEXT-DECORATION: none
+}
+#navigation LI A:hover {
+	BACKGROUND: #999966
+}
+.menu {
+	BORDER-RIGHT: #791e1e 1px solid; BORDER-TOP: #791e1e 1px solid; BORDER-LEFT: #791e1e 1px solid; BORDER-BOTTOM: #791e1e 1px solid
+}
+.menutitle {
+	MARGIN-TOP: 6px; FONT-WEIGHT: bold; COLOR: #000; FONT-VARIANT: small-caps
+}
+.menuprepend {
+	BACKGROUND-COLOR: #b9b997
+}
+.menuprepend .free1 {
+	BORDER-BOTTOM: #791e1e 1px solid
+}
+.menuappend {
+	
+}
+.menuappend .free1 {
+	
+}
+.menu .menubody {
+	
+}
+.menu A {
+	COLOR: #791e1e; TEXT-DECORATION: none
+}
+.menu A:hover {
+	COLOR: #a92929
+}
+.pagemap .menubody .toc .level1 {
+	LIST-STYLE-TYPE: none
+}
+.pagemap .menubody .toc .level1 A {
+	FONT-WEIGHT: bold; COLOR: #791e1e
+}
+.pagemap .menubody .toc .level1 A:hover {
+	COLOR: #a92929
+}
+.pagemap .menubody .toc .level2 {
+	LIST-STYLE-IMAGE: url(images/dot.gif); COLOR: #000
+}
+.pagemap .menubody .toc .level2 A {
+	FONT-WEIGHT: normal; COLOR: #791e1e
+}
+.pagemap .menubody .toc .level3 {
+	COLOR: #000
+}
+.pagemap .menubody .toc .level3 A {
+	FONT-WEIGHT: normal; COLOR: #791e1e
+}
+.menu .explorer .folder {
+	LIST-STYLE-IMAGE: url(images/folder.gif)
+}
+.menu .explorer .folderopen {
+	LIST-STYLE-IMAGE: url(images/folder_open.gif)
+}
+.menu .explorer .file {
+	LIST-STYLE-IMAGE: url(images/file.gif)
+}
+#content {
+	BORDER-RIGHT: #791e1e 1px solid; BORDER-TOP: #791e1e 1px solid; BORDER-LEFT: #791e1e 1px solid; BORDER-BOTTOM: #791e1e 1px solid
+}
+#contentprepend {
+	BACKGROUND-COLOR: #b9b997
+}
+#contentprepend .free1 {
+	BORDER-BOTTOM: #791e1e 1px solid
+}
+#contentappend {
+	
+}
+#contentappend .free1 {
+	
+}
+#contentbody {
+	
+}
+#contentprepend .commands {
+	MARGIN-TOP: 6px; FONT-WEIGHT: bold; COLOR: #791e1e; FONT-VARIANT: small-caps
+}
+#contentprepend .commands A {
+	FONT-WEIGHT: bold; COLOR: #791e1e; FONT-VARIANT: small-caps; TEXT-DECORATION: none
+}
+#contentprepend .commands A:hover {
+	COLOR: #a92929
+}
+#contentbody A {
+	COLOR: #791e1e; TEXT-DECORATION: none
+}
+#contentbody A:hover {
+	COLOR: #a92929
+}
+#contentbody .wikilink1 {
+	
+}
+#contentbody .wikilink2 {
+	COLOR: #f00
+}
+#contentbody .wikilink2:hover {
+	COLOR: #ff5d5d
+}
+#contentbody .interwiki {
+	PADDING-LEFT: 20px; BACKGROUND: url(images/interwiki.png) no-repeat
+}
+#contentbody .urlextern {
+	PADDING-LEFT: 18px; BACKGROUND: url(images/link_icon.gif) no-repeat
+}
+#contentbody .secedit {
+	BORDER-BOTTOM: #791e1e 1px solid
+}
+#contentbody .secedit INPUT {
+	BORDER-RIGHT: #791e1e 1px solid; BORDER-TOP: #791e1e 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 0.7em; BACKGROUND: #b9b997; BORDER-LEFT: #791e1e 1px solid; COLOR: #791e1e; BORDER-BOTTOM: #791e1e 1px solid
+}
+#contentbody .secedit INPUT:hover {
+	BACKGROUND: #999966
+}
+#contentbody H1 {
+	FONT-SIZE: 1.5em; COLOR: #000
+}
+#contentbody H2 {
+	FONT-SIZE: 1.2em; COLOR: #000
+}
+#contentbody H3 {
+	FONT-SIZE: 1em; COLOR: #000
+}
+#contentbody H4 {
+	FONT-SIZE: 1em; COLOR: #000
+}
+#contentbody H5 {
+	FONT-SIZE: 1em; COLOR: #000
+}
+DIV.level1 {
+	
+}
+DIV.level2 {
+	
+}
+DIV.level3 {
+	
+}
+DIV.level4 {
+	
+}
+DIV.level5 {
+	
+}
+#contentbody TABLE {
+	BORDER-RIGHT: #999 1px solid; BORDER-TOP: #999 1px solid; BORDER-LEFT: #999 1px solid; BORDER-BOTTOM: #999 1px solid
+}
+#contentbody TABLE TH {
+	BORDER-RIGHT: #999 1px solid; BORDER-TOP: #999 1px solid; BORDER-LEFT: #999 1px solid; BORDER-BOTTOM: #999 1px solid; BACKGROUND-COLOR: #b9b997
+}
+#contentbody TABLE TD {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid; BACKGROUND-COLOR: #fff
+}
+#contentbody TABLE TR:hover {
+	BACKGROUND-COLOR: #ffffe5
+}
+.fn {
+	BORDER-TOP: #999 1px dashed; MARGIN-TOP: 20px; BACKGROUND-COLOR: #ffe
+}
+UNKNOWN {
+	MARGIN-TOP: 0px; BORDER-TOP-STYLE: none
+}
+.fn_top {
+	FONT-SIZE: 0.7em; VERTICAL-ALIGN: super
+}
+.fn_bot {
+	FONT-SIZE: 0.7em; VERTICAL-ALIGN: super
+}
+#contentbody .preview {
+	BORDER-RIGHT: #999 1px dotted; PADDING-RIGHT: 1em; BORDER-TOP: #999 1px dotted; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; MARGIN: 1em; BORDER-LEFT: #999 1px dotted; PADDING-TOP: 1em; BORDER-BOTTOM: #999 1px dotted
+}
+#contentbody BLOCKQUOTE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #a58fbb 2px solid; PADDING-TOP: 0px
+}
+#contentbody P {
+	MARGIN: 0.5em 0px 0px
+}
+#contentbody PRE {
+	BORDER-RIGHT: #8cacbb 1px dotted; PADDING-RIGHT: 2px; BORDER-TOP: #8cacbb 1px dotted; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; OVERFLOW: auto; BORDER-LEFT: #8cacbb 1px dotted; COLOR: #000; PADDING-TOP: 2px; BORDER-BOTTOM: #8cacbb 1px dotted
+}
+#contentbody .code {
+	BORDER-RIGHT: #791e1e 1px dotted; PADDING-RIGHT: 2px; BORDER-TOP: #791e1e 1px dotted; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: #791e1e 1px dotted; PADDING-TOP: 2px; BORDER-BOTTOM: #791e1e 1px dotted; FONT-FAMILY: "Courier New",Courier,monospace; WHITE-SPACE: pre; BACKGROUND-COLOR: #fffff5
+}
+#contentbody PRE.php {
+	
+}
+#contentbody PRE.actionscript {
+	
+}
+#contentbody PRE.css {
+	
+}
+#contentbody PRE.html4strict {
+	
+}
+#contentbody PRE.javascript {
+	
+}
+#contentbody PRE.bash {
+	
+}
+#contentbody PRE  {
+	FONT-SIZE: 1em; FONT-FAMILY: "Courier New",Courier,monospace; BACKGROUND-COLOR: #fffff5
+}
+#contentbody PRE.code .br0 {
+	COLOR: #66cc66
+}
+#contentbody PRE.code .co1 {
+	COLOR: #808080; FONT-STYLE: normal; BACKGROUND-COLOR: #f0f0f0
+}
+#contentbody PRE.code .co2 {
+	COLOR: #808080; FONT-STYLE: normal; BACKGROUND-COLOR: #f0f0f0
+}
+#contentbody PRE.code .coMULTI {
+	COLOR: #808080; FONT-STYLE: normal; BACKGROUND-COLOR: #f0f0f0
+}
+#contentbody PRE.code .es0 {
+	FONT-WEIGHT: normal; COLOR: #000099
+}
+#contentbody PRE.code .kw1 {
+	COLOR: #b1b100
+}
+#contentbody PRE.code .kw2 {
+	FONT-WEIGHT: normal; COLOR: #000000
+}
+#contentbody PRE.code .kw3 {
+	COLOR: #000066
+}
+#contentbody PRE.code .kw4 {
+	COLOR: #993333
+}
+#contentbody PRE.code .kw5 {
+	COLOR: #7777ff
+}
+#contentbody PRE.code .me0 {
+	COLOR: #006600
+}
+#contentbody PRE.code .nu0 {
+	COLOR: #cc66cc
+}
+#contentbody PRE.code .re0 {
+	COLOR: #7777ff
+}
+#contentbody PRE.code .re1 {
+	COLOR: #7777ff
+}
+#contentbody PRE.code .re2 {
+	COLOR: #7777ff
+}
+#contentbody PRE.code .re4 {
+	COLOR: #009999
+}
+#contentbody PRE.code .sc0 {
+	COLOR: #00bbdd
+}
+#contentbody PRE.code .sc1 {
+	COLOR: #ddbb00
+}
+#contentbody PRE.code .sc2 {
+	COLOR: #009900
+}
+#contentbody PRE.code .st0 {
+	COLOR: #0000ff
+}
+#contentbody CODE {
+	FONT-FAMILY: "Courier New",Courier,monospace
+}
+#contentbody .diff-deletedline {
+	BACKGROUND-COLOR: #f99
+}
+#contentbody .diff-addedline {
+	BACKGROUND-COLOR: #99f
+}
+#contentbody .diffchange {
+	BACKGROUND-COLOR: #ff6
+}
+#media .mediaselect .mediaselect-left LI {
+	LIST-STYLE-IMAGE: url(images/folder.gif); MARGIN-LEFT: 15px
+}
+#media .mediaselect .mediaselect-right {
+	BORDER-LEFT: #000 1px solid
+}
+#media .mediaselect .mediaselect-right UL LI {
+	BORDER-RIGHT: #999 1px solid; BORDER-TOP: #999 1px solid; BORDER-LEFT: #999 1px solid; BORDER-BOTTOM: #999 1px solid
+}
+#media .mediaselect .mediaselect-right UL LI .imagemeta {
+	BORDER-TOP: #ccc 1px solid
+}
+#media .uploadform {
+	MARGIN-TOP: 20px
+}
+#mediaedit .footer {
+	BORDER-TOP: #999 1px solid
+}
+#contentbody .pageinfo {
+	BORDER-TOP: #ccc 1px solid; COLOR: #999
+}
+#wikitext {
+	FONT-SIZE: 12px; WIDTH: 100%; FONT-FAMILY: "Courier New",Courier,monospace; HEIGHT: 100%
+}

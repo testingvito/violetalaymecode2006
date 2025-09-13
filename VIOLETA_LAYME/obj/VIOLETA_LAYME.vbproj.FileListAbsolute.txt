@@ -1,0 +1,10 @@
+C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\obj\Debug\VIOLETA_LAYME.exe
+C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\obj\Debug\VIOLETA_LAYME.pdb
+C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\bin\VIOLETA_LAYME.exe
+C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\bin\VIOLETA_LAYME.pdb
+C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\bin\VIOLETA_LAYME.xml
+C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\obj\Debug\VIOLETA_LAYME.Frm.resources
+C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\obj\Debug\VIOLETA_LAYME.frmRent.resources
+C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\obj\Debug\VIOLETA_LAYME.vbproj.GenerateResource.Cache
+C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\obj\Debug\VIOLETA_LAYME.xml

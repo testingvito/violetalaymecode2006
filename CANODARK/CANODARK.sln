@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CANODARK", "CANODARK.vbproj", "{4E6FAFCD-377B-4D8F-876F-89CDC6757597}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4E6FAFCD-377B-4D8F-876F-89CDC6757597}.Debug.ActiveCfg = Debug|.NET
+		{4E6FAFCD-377B-4D8F-876F-89CDC6757597}.Debug.Build.0 = Debug|.NET
+		{4E6FAFCD-377B-4D8F-876F-89CDC6757597}.Release.ActiveCfg = Release|.NET
+		{4E6FAFCD-377B-4D8F-876F-89CDC6757597}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DIG VERIFICADOR", "DIG VERIFICADOR.vbproj", "{BAB7E5CB-E529-473A-84C9-32C50ADB672B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{BAB7E5CB-E529-473A-84C9-32C50ADB672B}.Debug.ActiveCfg = Debug|.NET
+		{BAB7E5CB-E529-473A-84C9-32C50ADB672B}.Debug.Build.0 = Debug|.NET
+		{BAB7E5CB-E529-473A-84C9-32C50ADB672B}.Release.ActiveCfg = Release|.NET
+		{BAB7E5CB-E529-473A-84C9-32C50ADB672B}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

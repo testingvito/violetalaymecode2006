@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="VIOLETA_LAYME">
+</Property><Property Name="Archivo de la solución" Value="C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\VIOLETA_LAYME.sln">
+</Property><Property Name="Archivo de opciones de usuario" Value="C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\VIOLETA_LAYME.suo">
+</Property><Property Name="Date" Value="martes, 26 de enero de 2016">
+</Property><Property Name="Time" Value="21:54">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="VIOLETA_LAYME.sln" Description="La copia C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\Backup\VIOLETA_LAYME.sln del archivo se ha realizado correctamente">
+</Event><Event ErrorLevel="0" Project="" Source="VIOLETA_LAYME.suo" Description="La copia C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\Backup\VIOLETA_LAYME.suo del archivo se ha realizado correctamente">
+</Event><Event ErrorLevel="0" Project="VIOLETA_LAYME" Source="VIOLETA_LAYME.vbproj" Description="Se realizó correctamente la copia de seguridad del archivo de proyecto C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\Backup\VIOLETA_LAYME.vbproj">
+</Event><Event ErrorLevel="0" Project="VIOLETA_LAYME" Source="VIOLETA_LAYME.vbproj.user" Description="La copia de seguridad C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\Backup\VIOLETA_LAYME.vbproj.user del archivo se ha creado correctamente">
+</Event><Event ErrorLevel="0" Project="VIOLETA_LAYME" Source="AssemblyInfo.vb" Description="Se realizó correctamente la copia de seguridad del archivo C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\Backup\AssemblyInfo.vb">
+</Event><Event ErrorLevel="0" Project="VIOLETA_LAYME" Source="Form1.vb" Description="Se realizó correctamente la copia de seguridad del archivo C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\Backup\Form1.vb">
+</Event><Event ErrorLevel="0" Project="VIOLETA_LAYME" Source="rent.vb" Description="Se realizó correctamente la copia de seguridad del archivo C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\Backup\rent.vb">
+</Event><Event ErrorLevel="0" Project="VIOLETA_LAYME" Source="Form1.resx" Description="Se realizó correctamente la copia de seguridad del archivo C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\Backup\Form1.resx">
+</Event><Event ErrorLevel="0" Project="VIOLETA_LAYME" Source="rent.resx" Description="Se realizó correctamente la copia de seguridad del archivo C:\Users\Victor\Desktop\VSTUDIO.NET\VIOLETA_LAYME\Backup\rent.resx">
+</Event><Event ErrorLevel="0" Project="VIOLETA_LAYME" Source="VIOLETA_LAYME.vbproj" Description="Proyecto convertido correctamente">
+</Event><Event ErrorLevel="3" Project="VIOLETA_LAYME" Source="VIOLETA_LAYME.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="VIOLETA_LAYME.sln" Description="La solución se convirtió correctamente">
+</Event><Event ErrorLevel="3" Project="" Source="VIOLETA_LAYME.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="VIOLETA_LAYME" Source="VIOLETA_LAYME.vbproj" Description="Búsqueda completa: no es necesario actualizar los archivos de proyecto.">
+</Event></UpgradeLog>

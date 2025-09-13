@@ -1,0 +1,844 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0083)http://www.elguille.info/colabora/puntoNET/FernandoLuque_Arrays_Bidimensionales.htm -->
+<HTML><HEAD><TITLE>Colabora.NET: Arreglos en Visual Basic .NET</TITLE>
+<META http-equiv=Content-Language content=es>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content=".NET; VB.NET; Arreglos, Arrays, Bidimensional" name=keywords>
+<META content="Uso de arreglos de dos dimensiones en Visual Basic .NET" 
+name=description>
+<META content="MSHTML 6.00.2800.1561" name=GENERATOR></HEAD>
+<BODY vLink=#0000ff aLink=#ff0000 link=#0000ff bgColor=#ffffff 
+background="Colabora_NET Arreglos en Visual Basic _NET_archivos/cuadriculaGris30.gif">
+<SCRIPT language=JavaScript>
+var gsPath = "../../"
+function IrADeLista(){
+    var s1 = gsBanner.D1.selectedIndex;
+    var s2 = gsBanner.D1.options[s1].value;
+    if( s2 != "Selecciona" )
+        window.location = gsPath + s2;
+}
+</SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="Colabora_NET Arreglos en Visual Basic _NET_archivos/elGuille.js"></SCRIPT>
+
+<P align=right><FONT face=Verdana><A 
+href="http://www.elguille.info/colabora/puntoNET/colaboraNET.htm"><IMG height=30 
+src="Colabora_NET Arreglos en Visual Basic _NET_archivos/colabora_guillepuntonet.jpg" 
+width=500 align=baseline border=0></A></FONT></P>
+<TABLE id=tablePanorama style="BORDER-COLLAPSE: collapse" cellPadding=0 
+width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top align=left width="80%">
+      <P><STRONG><SPAN style="FONT-SIZE: 30pt; FONT-FAMILY: Verdana">Arreglos en 
+      Visual Basic .Net</SPAN></STRONG><B><SPAN 
+      style="FONT-SIZE: 18pt; FONT-FAMILY: Verdana"><BR><STRONG><SPAN 
+      style="FONT-FAMILY: Verdana">Uso de Arreglos de dos 
+      dimensiones</SPAN></STRONG></SPAN></B></P>
+      <P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Fecha: 
+      30/Nov/2004 (Noviembre de 2004)</SPAN></STRONG><B><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><BR><STRONG><SPAN 
+      style="FONT-FAMILY: Verdana">Autor: Ing. Fernando Luque 
+      Sánchez&nbsp;&nbsp;&nbsp;- Trujillo - Perú </SPAN></STRONG></SPAN></B></P>
+      <P style="TEXT-INDENT: 35.4pt"><STRONG><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Emails: <A 
+      style="COLOR: blue; TEXT-DECORATION: underline; text-underline: single" 
+      href="mailto:fls2303@hotmail.com"><SPAN 
+      style="FONT-WEIGHT: normal">fls2303@hotmail.com</SPAN></A> – <A 
+      style="COLOR: blue; TEXT-DECORATION: underline; text-underline: single" 
+      href="mailto:fluque@infonegocio.net.pe"><SPAN 
+      style="FONT-WEIGHT: normal">fluque@infonegocio.net.pe</SPAN></A></SPAN></STRONG></P>
+      <P style="TEXT-INDENT: 35.4pt">&nbsp;</P></TD>
+    <TD vAlign=top align=middle width="20%"><IFRAME 
+      src="Colabora_NET Arreglos en Visual Basic _NET_archivos/Panoramabox.aspx" 
+      frameBorder=0 width=180 scrolling=no 
+height=240></IFRAME></TD></TR></TBODY></TABLE>
+<HR width="90%" noShade SIZE=3>
+
+<BLOCKQUOTE>
+  <P><STRONG><SPAN 
+  style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">El 
+  presente trabajo pretende colaborar con el conocimiento de Visual Basic .Net y 
+  de las opciones especificas de los arreglos de dos dimensiones. El ejemplo 
+  maneja dos arrays bidimensionales que tienen relación (ya se que podría 
+  hacerse usando DataSet y DataTables), pero la idea del ejercicio es justamente 
+  el manejo de arrays bidimensionales.</SPAN></STRONG></P>
+  <P><STRONG><SPAN 
+  style="FONT-SIZE: 13.5pt; COLOR: black; FONT-FAMILY: Verdana">Un poco de 
+  teoría</SPAN></STRONG><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: purple; FONT-FAMILY: Verdana"> </SPAN></P>
+  <P><STRONG><SPAN 
+  style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">Los 
+  Arrays o arreglos son </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">conjuntos de 
+  Variables Agrupadas con un nombre</SPAN><SPAN 
+  style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">, 
+  que se pueden manejar juntas o individualmente, en Visual Basic .Net se pueden 
+  tener arreglos desde una dimensión y hasta un máximo de 32 dimensiones. 
+  </SPAN></STRONG></P>
+  <P><STRONG><SPAN style="COLOR: black; FONT-FAMILY: Verdana">Como se 
+  definen</SPAN></STRONG></P>
+  <P><STRONG><SPAN 
+  style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">Para 
+  definir un arrays se utiliza Dim, Private, Friend o Public según el alcande 
+  del mismo, por ejemplo la orden:</SPAN></STRONG></P>
+  <P style="TEXT-ALIGN: center" align=center><STRONG><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">Dim Cursos( , ) As 
+  String</SPAN></STRONG></P>
+  <P><STRONG><SPAN 
+  style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">Define 
+  el array Cursos sin asignarle la cantidad de elementos de cada dimensión. El 
+  array anterior tendrá que redefinirse a nivel de procedimiento usando la 
+  instrucción Redim, está funciona unicamente cambiando&nbsp;el tamaño de la 
+  última dimensión. Generalmente se usa una variable que va aumentando, suponer 
+  que la variable </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">Incluidos</SPAN><SPAN 
+  style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana"> 
+  es la utilizada, la instrucción podría ser como la 
+  siguiente:</SPAN></STRONG></P>
+  <P style="TEXT-ALIGN: center" align=center><STRONG><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">Redim 
+  Cursos(2,Incluidos)</SPAN></STRONG></P>
+  <P><STRONG><SPAN 
+  style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">y 
+  para conservar los datos actuales en el Array se utiliza la palabra 
+  </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">Preserve</SPAN><SPAN 
+  style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">:</SPAN></STRONG></P>
+  <P style="TEXT-ALIGN: center" align=center><STRONG><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">Redim Preserve 
+  Cursos(2,Incluidos)</SPAN></STRONG></P>
+  <P> </P>
+  <P><STRONG><SPAN style="COLOR: black; FONT-FAMILY: Verdana">Algo de lo que 
+  contiene</SPAN></STRONG></P>
+  <P><STRONG><SPAN 
+  style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">Todos 
+  los elementos del arrays deben ser del mismo tipo.En Visual Studio .Net los 
+  arrays derivan de la clase Arrays del NameSpace System. Esta Clase (Array) 
+  proporciona los métodos para crear, manipular, realizar busquedas y ordenación 
+  de arrays.</SPAN></STRONG></P>
+  <P><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">Un 
+  elemento es un valor de <B>Array,</B>&nbsp;al que se puede acceder haciendo 
+  uso del indice o indices según las dimensiones. Por ejemplo, para acceder al 
+  elemento de la segunda fila y la tercera columna del arrays bidimensional con 
+  nombre Cursos se debe escribir <STRONG><SPAN 
+  style="FONT-FAMILY: Verdana">Cursos(1,2)</SPAN></STRONG>, cabe adelantar que 
+  en Visual Basic .Net el valor inicial de cada dimensión es CERO. El método 
+  <STRONG><SPAN style="FONT-FAMILY: Verdana">GetLowerBound</SPAN></STRONG> 
+  permite obtener el límite inferior de una determinada dimensión. Para el 
+  límite superior de la dimensión especificada se utiliza el método 
+  <STRONG><SPAN 
+  style="FONT-FAMILY: Verdana">GetUpperBound.</SPAN></STRONG></SPAN></P>
+  <P><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">La 
+  longitud de <B>Array</B> es el número total de elementos que puede contener. 
+  El método <STRONG><SPAN style="FONT-FAMILY: Verdana">GetLength</SPAN></STRONG> 
+  permite obtener el número de elementos de un array.</SPAN></P>
+  <P><SPAN style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">El rango 
+  de <B>Array</B> es el número de dimensiones de <B>Array</B>.&nbsp;La Propiedad 
+  <STRONG><SPAN style="FONT-FAMILY: Verdana">Rank</SPAN></STRONG> permite 
+  obtener el número de dimensiones de una array.</SPAN></P>
+  <P><STRONG><SPAN 
+  style="FONT-SIZE: 13.5pt; COLOR: black; FONT-FAMILY: Verdana">Ahora mi 
+  ejercicio</SPAN></STRONG></P>
+  <P style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+  style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">El sistema de 
+  control de Matriculas de un instituto es muy lento, se necesita que los datos 
+  puedan procesarse de manera mas rápida y segura, se decide hacer un sistema 
+  por computadora; este deberá registrar según los siguientes productos 
+  descritos en la tabla: </SPAN></P>
+  <DIV align=center>
+  <TABLE class=MsoNormalTable id=table3 
+  style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+  cellSpacing=0 cellPadding=0 border=1>
+    <TBODY>
+    <TR>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 86.25pt; PADDING-TOP: 0cm" 
+      vAlign=top width=115>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Cod. Producto 
+      </SPAN></P></TD>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 144.75pt; PADDING-TOP: 0cm" 
+      vAlign=top width=193>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Descripción 
+    </SPAN></P></TD></TR>
+    <TR>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 86.25pt; PADDING-TOP: 0cm" 
+      vAlign=top width=115>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">IES </SPAN></P></TD>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 144.75pt; PADDING-TOP: 0cm" 
+      vAlign=top width=193>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Computación e Informática 
+        </SPAN></P></TD></TR>
+    <TR>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 86.25pt; PADDING-TOP: 0cm" 
+      vAlign=top width=115>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">SEC </SPAN></P></TD>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 144.75pt; PADDING-TOP: 0cm" 
+      vAlign=top width=193>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Secretariado Ejecutivo 
+        </SPAN></P></TD></TR>
+    <TR>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 86.25pt; PADDING-TOP: 0cm" 
+      vAlign=top width=115>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">DBS </SPAN></P></TD>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 144.75pt; PADDING-TOP: 0cm" 
+      vAlign=top width=193>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Da Bussines 
+    </SPAN></P></TD></TR></TBODY></TABLE></DIV>
+  <P class=MsoNormal style="TEXT-INDENT: 35.4pt; TEXT-ALIGN: justify"><B><SPAN 
+  lang=ES-PE style="COLOR: black"></SPAN></B>&nbsp;</P>
+  <P class=MsoNormal style="TEXT-INDENT: 35.4pt; TEXT-ALIGN: justify"><SPAN 
+  lang=ES-PE style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">De 
+  acuerdo a los Productos antes registrados pueden crearse&nbsp;cursos o 
+  promociones, el sistema ingresará y pedirá: Número de la promoción en el 
+  formato 9999-XX donde las 9999 será el año actual y las XX el número del curso 
+  registrado en el año, por ejemplo; 01, 02, 03, etc., también deberá 
+  registrarse la descripción del curso, la fecha de inicio, el número de 
+  vacantes y la cantidad de matriculados. </SPAN></P>
+  <P class=MsoNormal style="TEXT-ALIGN: justify"><B><SPAN lang=ES-PE 
+  style="COLOR: black"></SPAN></B>&nbsp;</P>
+  <P class=MsoNormal style="TEXT-INDENT: 35.4pt; TEXT-ALIGN: justify"><SPAN 
+  lang=ES-PE style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">Una vez 
+  registrado&nbsp;el o los&nbsp;cursos, se podrá matricular alumnos, de los 
+  cuales se pedirá el ingreso de Apellidos, Nombres, teléfono y fecha de 
+  matricula. Los datos por cada curso deben de registrarse y aparecer en un 
+  formulario de reporte. </SPAN></P>
+  <P class=MsoNormal style="TEXT-INDENT: 35.4pt; TEXT-ALIGN: justify"><B><SPAN 
+  lang=ES-PE style="COLOR: black"></SPAN></B>&nbsp;</P>
+  <P class=MsoNormal style="TEXT-INDENT: 35.4pt; TEXT-ALIGN: justify"><B><SPAN 
+  lang=ES-PE style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana">Los 
+  datos de la tabla siguiente : </SPAN></B></P>
+  <TABLE class=MsoNormalTable id=table4 
+  style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+  cellSpacing=0 cellPadding=0 border=1>
+    <TBODY>
+    <TR>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 140.25pt; PADDING-TOP: 0cm" 
+      vAlign=top width=187>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Producto </SPAN></P></TD>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 222pt; PADDING-TOP: 0cm" 
+      vAlign=top width=296>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Promociones </SPAN></P></TD>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 231.75pt; PADDING-TOP: 0cm" 
+      vAlign=top width=309>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Matriculados 
+    </SPAN></P></TD></TR>
+    <TR>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 140.25pt; PADDING-TOP: 0cm" 
+      vAlign=top width=187 rowSpan=3>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN 
+        lang=ES-PE></SPAN>&nbsp;</P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN 
+        lang=ES-PE></SPAN>&nbsp;</P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN 
+        lang=ES-PE></SPAN>&nbsp;</P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN 
+        lang=ES-PE></SPAN>&nbsp;</P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">IES&nbsp; </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Computación e Informática 
+        </SPAN></P></TD>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 222pt; PADDING-TOP: 0cm" 
+      vAlign=top width=296>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">2004-06</SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Computacion e 
+        Informática</SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Fecha de Inicio: 
+        01/11/2004</SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Vacantes: 25</SPAN></P></TD>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 231.75pt; PADDING-TOP: 0cm" 
+      vAlign=top width=309>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Luque Villacorta, Fernando 
+        </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Telf. 9458548 </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Fecha: 25/10/2004 
+        </SPAN></P></TD></TR>
+    <TR>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 222pt; PADDING-TOP: 0cm" 
+      vAlign=top width=296 rowSpan=2>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN 
+        lang=ES-PE></SPAN>&nbsp;</P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">2004-07</SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Computación e 
+        Informática</SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Fecha de Inicio: 
+        05/11/2004</SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN 
+        lang=ES-PE>Vacantes: 20 </SPAN></P></TD>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 231.75pt; PADDING-TOP: 0cm" 
+      vAlign=top width=309>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Pereda Geronimo, Luis 
+        </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Telf. 9444567 </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Fecha: 28/09/2004 
+        </SPAN></P></TD></TR>
+    <TR>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 231.75pt; PADDING-TOP: 0cm" 
+      vAlign=top width=309>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Terranova Carrion 
+        Esmeralda </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Telf. 9499498 </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Fecha: 30/09/2004 
+        </SPAN></P></TD></TR>
+    <TR>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 140.25pt; PADDING-TOP: 0cm" 
+      width=187 rowSpan=4>
+        <P class=MsoNormal><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">SEC </SPAN></P>
+        <P class=MsoNormal><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Secretariado Ejecutivo 
+        </SPAN></P></TD>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 222pt; PADDING-TOP: 0cm" 
+      width=296 rowSpan=2>
+        <P class=MsoNormal><SPAN lang=ES-PE></SPAN>&nbsp;</P>
+        <P class=MsoNormal><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">2004-10</SPAN></P>
+        <P class=MsoNormal><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Secretariado 
+        Ejecutivo</SPAN></P>
+        <P class=MsoNormal><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Fecha de Inicio: 
+        08/11/2004</SPAN></P>
+        <P class=MsoNormal><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Vacantes: 30</SPAN></P>
+        <P class=MsoNormal>&nbsp;</P></TD>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 231.75pt; PADDING-TOP: 0cm" 
+      vAlign=top width=309>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Hinostroza Ramirez Carlos 
+        </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Telf. 9645676 </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Fecha: 30/09/2004 
+        </SPAN></P></TD></TR>
+    <TR>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 231.75pt; PADDING-TOP: 0cm" 
+      vAlign=top width=309>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Villacorta Acosta, Carol 
+        </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Telf. 96442567 </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Fecha: 30/09/2004 
+        </SPAN></P></TD></TR>
+    <TR>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 222pt; PADDING-TOP: 0cm" 
+      width=296 rowSpan=2>
+        <P class=MsoNormal><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">2004-12</SPAN></P>
+        <P class=MsoNormal><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Secretariado 
+        Ejecutivo</SPAN></P>
+        <P class=MsoNormal><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Fecha de Inicio: 
+        12/11/2004</SPAN></P>
+        <P class=MsoNormal><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">vacantes: 25</SPAN></P></TD>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 231.75pt; PADDING-TOP: 0cm" 
+      vAlign=top width=309>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Bolivar Saldaña, Silvia 
+        </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Telf. 96656443 </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Fecha: 30/09/2004 
+        </SPAN></P></TD></TR>
+    <TR>
+      <TD 
+      style="PADDING-RIGHT: 5.4pt; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; WIDTH: 231.75pt; PADDING-TOP: 0cm" 
+      vAlign=top width=309>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Sanchez Campos, 
+        Julia</SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Telf. 9644444 </SPAN></P>
+        <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=ES-PE 
+        style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">Fecha: 01/10/2004 
+        </SPAN></P></TD></TR></TBODY></TABLE>
+  <P class=MsoNormal style="TEXT-ALIGN: justify"><B><SPAN lang=ES-PE 
+  style="COLOR: black"></SPAN></B>&nbsp;</P>
+  <P><FONT face=Verdana size=2>Nota: Bajar el empaquetado del ejercicio para 
+  ejecutarlo, fue hecho con Visual Studio 2002. &nbsp;</FONT></P>
+  <P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">A continuación 
+  sigue parte del código en Visual Basic:</SPAN></STRONG></P>
+  <P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">En el 
+  Módulo:</SPAN></STRONG></P>
+  <P class=MsoNormal><SPAN lang=ES-PE style="COLOR: blue"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'************* 
+  MODULO *******************</SPAN></P>
+  <P class=MsoNormal><SPAN lang=ES-PE style="COLOR: blue">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'Programación: 
+  Ing. Fernando Luque Sánchez</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'Noviembre 
+  2004</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">Module 
+  SistMatriculas</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 
+  </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'Definicion de 
+  las variables para Productos</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  Public vProducto As String</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 
+  </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'Para saber el 
+  Número de Promociones Aperturadas</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  Public vNumPromos As Integer</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'Para saber el 
+  Número de Alumnos Matriculados</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  Public vNumAlumnos As Integer</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 
+  </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'''' ARREGLOS 
+  PARA ALMACENAR LOS DATOS</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'Para 
+  Alamcenar los datos de las promociones</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  Public aPromos(,) As String&nbsp; </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'CódPromo, 
+  Descrip, Fecha, Vacantes, Matriculados</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'Para 
+  Alamcenar los datos de los alumnos</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  Public aAlumnos(,) As String&nbsp; </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">' CodAlumno, 
+  CodPromo, Descrip, </SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  Nombre, Telefono y Fecha Matricula</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'Para el 
+  Título del Reporte</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  Public VTitulo As String</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'Datos de un 
+  Curso Aperturado</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  Public vDescrip As String</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 
+  Public vCodigo As String</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  &nbsp;Public Vfechainicio As Date</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 
+  Public vVacantes As Integer</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  </SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">'Para saber si 
+  los Formularios están abiertos</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; 
+  Public fPromosA As Integer</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">End 
+  Module</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal>&nbsp;</P>
+  <P class=MsoNormal><STRONG><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana">En el formulario 
+  Principal</SPAN></STRONG></P>
+  <P class=MsoNormal>&nbsp;</P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">Public</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"> <SPAN 
+  style="COLOR: blue">Class</SPAN> frmPrincipal</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp; <SPAN style="COLOR: blue">Inherits</SPAN> 
+  System.Windows.Forms.Form</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">#<SPAN style="COLOR: blue">Region</SPAN> " Código generado por el 
+  Diseñador de Windows Forms "</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  *** codigo eliminado</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">#<SPAN style="COLOR: blue">End</SPAN> <SPAN 
+  style="COLOR: blue">Region</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp; <SPAN style="COLOR: blue">Private</SPAN> <SPAN 
+  style="COLOR: blue">Sub</SPAN> Reportes(<SPAN style="COLOR: blue">ByVal</SPAN> 
+  sender <SPAN style="COLOR: blue">As</SPAN> System.Object, _</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">ByVal</SPAN> e <SPAN style="COLOR: blue">As</SPAN> 
+  System.EventArgs) <SPAN style="COLOR: blue">Handles</SPAN> 
+  mnuRepPromos.Click</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">If</SPAN> sender <SPAN style="COLOR: blue">Is</SPAN> 
+  mnuRepPromos <SPAN style="COLOR: blue">Then</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: green">'REPORTE SOLAMENTE DE LAS PROMOCIONES 
+  ABIERTAS</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">Dim</SPAN> NReporte <SPAN style="COLOR: blue">As</SPAN> 
+  <SPAN style="COLOR: blue">New</SPAN> frmReportes()</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  VTitulo = "Reporte de Promociones"</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  NReporte.ShowDialog()</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">ElseIf</SPAN> sender <SPAN style="COLOR: blue">Is</SPAN> 
+  mnuRepAlumnosPromo <SPAN style="COLOR: blue">Then</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: green">'Reporte de los alumnos por Promocion</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">Dim</SPAN> RepAlumnos <SPAN style="COLOR: blue">As</SPAN> 
+  <SPAN style="COLOR: blue">New</SPAN> frmRepAlumnxPromo()</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  RepAlumnos.ShowDialog()</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">End</SPAN> <SPAN style="COLOR: blue">If</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">End</SPAN> <SPAN style="COLOR: blue">Sub</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp; <SPAN style="COLOR: blue">Private</SPAN> <SPAN 
+  style="COLOR: blue">Sub</SPAN> Salir(<SPAN style="COLOR: blue">ByVal</SPAN> 
+  sender <SPAN style="COLOR: blue">As</SPAN> System.Object, _</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">ByVal</SPAN> e <SPAN style="COLOR: blue">As</SPAN> 
+  System.EventArgs) <SPAN style="COLOR: blue">Handles</SPAN> 
+  mnuSalir.Click</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  Application.Exit()</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp; <SPAN style="COLOR: blue">End</SPAN> <SPAN 
+  style="COLOR: blue">Sub</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp; <SPAN style="COLOR: green">'MUESTRA EL FORMULARIO DE 
+  INGRESO DE PROMOCIONES.</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">Private</SPAN> <SPAN style="COLOR: blue">Sub</SPAN> 
+  mnuIngPromo_Click(<SPAN style="COLOR: blue">ByVal</SPAN> sender <SPAN 
+  style="COLOR: blue">As</SPAN> System.Object, _</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">ByVal</SPAN> e <SPAN style="COLOR: blue">As</SPAN> 
+  System.EventArgs) <SPAN style="COLOR: blue">Handles</SPAN> 
+  mnuIngPromo.Click</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mnuIngPromo.Enabled = 
+  <SPAN style="COLOR: blue">False</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">Dim</SPAN> iPromos <SPAN style="COLOR: blue">As</SPAN> 
+  <SPAN style="COLOR: blue">New</SPAN> frmPromociones()</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iPromos.MdiParent = 
+  <SPAN style="COLOR: blue">Me</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iPromos.Show()</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp; <SPAN style="COLOR: blue">End</SPAN> <SPAN 
+  style="COLOR: blue">Sub</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp; <SPAN style="COLOR: green">'Procedimientos para 
+  </SPAN></SPAN><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New"><U1:PERSONNAME 
+  ProductID="la Matrícula" w:st="on">la Inserción</U1:PERSONNAME> de 
+  Alumnos</SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">Private</SPAN> <SPAN style="COLOR: blue">Sub</SPAN> 
+  mnuIngAlumnos_Click(<SPAN style="COLOR: blue">ByVal</SPAN> sender <SPAN 
+  style="COLOR: blue">As</SPAN> System.Object, _</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <SPAN style="COLOR: blue">ByVal</SPAN> e <SPAN style="COLOR: blue">As</SPAN> 
+  System.EventArgs) <SPAN style="COLOR: blue">Handles</SPAN> 
+  mnuIngAlumnos.Click</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">Dim</SPAN> formAlumnos <SPAN style="COLOR: blue">As</SPAN> 
+  <SPAN style="COLOR: blue">New</SPAN> fAlumnosMatri()</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">Me</SPAN>.mnuIngAlumnos.Enabled = <SPAN 
+  style="COLOR: blue">False</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  formAlumnos.ShowDialog()</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp; <SPAN style="COLOR: blue">End</SPAN> <SPAN 
+  style="COLOR: blue">Sub</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp; <SPAN style="COLOR: green">'ACERCA 
+  DE....</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">Private</SPAN> <SPAN style="COLOR: blue">Sub</SPAN> 
+  AcercaDe(<SPAN style="COLOR: blue">ByVal</SPAN> sender <SPAN 
+  style="COLOR: blue">As</SPAN> System.Object, _</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">ByVal</SPAN> e <SPAN style="COLOR: blue">As</SPAN> 
+  System.EventArgs) <SPAN style="COLOR: blue">Handles</SPAN> 
+  MenuItem2.Click</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">Dim</SPAN> fAcerca <SPAN style="COLOR: blue">As</SPAN> 
+  <SPAN style="COLOR: blue">New</SPAN> frmAcerca()</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  fAcerca.ShowDialog()</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp; <SPAN style="COLOR: blue">End</SPAN> <SPAN 
+  style="COLOR: blue">Sub</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp; <SPAN style="COLOR: green">'Para determinar si el 
+  número de Promociones es Mayor a Cero</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: green; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">Private</SPAN> <SPAN style="COLOR: blue">Sub</SPAN> 
+  mnuMoves_Click(<SPAN style="COLOR: blue">ByVal</SPAN> sender <SPAN 
+  style="COLOR: blue">As</SPAN> System.Object, _</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">ByVal</SPAN> e <SPAN style="COLOR: blue">As</SPAN> 
+  System.EventArgs) <SPAN style="COLOR: blue">Handles</SPAN> mnuMoves.Click, 
+  mnuMoves.Select</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">If</SPAN> fPromosA = 0 <SPAN 
+  style="COLOR: blue">Then</SPAN> mnuIngPromo.Enabled = <SPAN 
+  style="COLOR: blue">True</SPAN> _</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <SPAN style="COLOR: blue">Else</SPAN> mnuIngPromo.Enabled = <SPAN 
+  style="COLOR: blue">False</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">If</SPAN> vNumPromos = 0 <SPAN 
+  style="COLOR: blue">Then</SPAN> mnuIngAlumnos.Enabled = <SPAN 
+  style="COLOR: blue">False</SPAN> _</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <SPAN style="COLOR: blue">Else</SPAN> mnuIngAlumnos.Enabled = <SPAN 
+  style="COLOR: blue">True</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">End</SPAN> <SPAN style="COLOR: blue">Sub</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp; <SPAN style="COLOR: blue">Private</SPAN> <SPAN 
+  style="COLOR: blue">Sub</SPAN> mnuReporte_Select(<SPAN 
+  style="COLOR: blue">ByVal</SPAN> sender <SPAN style="COLOR: blue">As</SPAN> 
+  <SPAN style="COLOR: blue">Object</SPAN>, <SPAN 
+  style="COLOR: blue">ByVal</SPAN> e <SPAN style="COLOR: blue">As</SPAN> 
+  System.EventArgs) <SPAN style="COLOR: blue">Handles</SPAN> 
+  mnuReporte.Select</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">If</SPAN> vNumPromos = 0 <SPAN 
+  style="COLOR: blue">Then</SPAN> mnuRepPromos.Enabled = <SPAN 
+  style="COLOR: blue">False</SPAN> _</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <SPAN style="COLOR: blue">Else</SPAN> mnuRepPromos.Enabled = <SPAN 
+  style="COLOR: blue">True</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">If</SPAN> vNumPromos = 0 <SPAN 
+  style="COLOR: blue">OrElse</SPAN> vNumAlumnos = 0 <SPAN 
+  style="COLOR: blue">Then</SPAN> mnuRepAlumnosPromo.Enabled = <SPAN 
+  style="COLOR: blue">False</SPAN> _</SPAN></P>
+  <P class=MsoNormal><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Courier 
+  New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <SPAN style="COLOR: blue">Else</SPAN> mnuRepAlumnosPromo.Enabled = <SPAN 
+  style="COLOR: blue">True</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp; <SPAN 
+  style="COLOR: blue">End</SPAN> <SPAN style="COLOR: blue">Sub</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">&nbsp;End</SPAN><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"> <SPAN 
+  style="COLOR: blue">Class</SPAN></SPAN></P>
+  <P class=MsoNormal><SPAN 
+  style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"></SPAN>&nbsp;</P></BLOCKQUOTE>
+<HR width="90%" noShade SIZE=3>
+
+<P align=center><FONT face=Verdana size=2><A 
+href="http://www.elguille.info/default.aspx"><IMG height=50 alt="ir al índice" 
+src="Colabora_NET Arreglos en Visual Basic _NET_archivos/el_guille.jpg" 
+width=200 border=0></A></FONT></P>
+<BLOCKQUOTE>
+  <P><B><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"><A 
+  href="http://downloads.elguille.info/BajarZip.aspx?zip=FernandoLuque_ArraysBidimensionales.zip&amp;seccion=/colabora/" 
+  target=_blank>Fichero con el código de ejemplo:</A></SPAN></B><SPAN 
+  style="FONT-SIZE: 10pt; FONT-FAMILY: Verdana"> Tamaño 32 
+KB</SPAN></P></BLOCKQUOTE></BODY></HTML>

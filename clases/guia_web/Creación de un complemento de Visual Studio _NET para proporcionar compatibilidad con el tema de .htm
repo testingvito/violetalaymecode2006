@@ -1,0 +1,1341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0086)http://www.microsoft.com/spanish/msdn/articulos/archivo/311002/voices/xpthemeaddin.asp -->
+<!--TOOLBAR_EXEMPT--><!--TOOLBAR_EXEMPT--><HTML><HEAD><TITLE>Creación de un complemento de Visual Studio .NET para proporcionar compatibilidad con el tema de Windows XP</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META 
+content="utilice Windows Forms para crear un complemento de Microsoft Visual Studio .NET que configure automáticamente el código para usar la apariencia de Microsoft Windows XP" 
+name=Description>
+<META content=all name=Robots>
+<META 
+content="Visual Studio .NET, Visual Studio, Visual Basic, C#, Visual C++, J#, JsCript, Entorno de desarrollo" 
+name=Keywords>
+<META content=es name=MS.LOCALE>
+<META content="Eva Mª Pinto" name=Author><LINK 
+href="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/ie4.css" 
+type=text/css rel=stylesheet><LINK 
+href="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/ie5.css" 
+type=text/css rel=stylesheet>
+<STYLE>BODY {
+	MARGIN: 0px; FONT-FAMILY: verdana,arial,helvetica
+}
+</STYLE>
+
+<SCRIPT language=javascript 
+src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/combos.js"></SCRIPT>
+
+<SCRIPT language=javascript 
+src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/toolbar.js"></SCRIPT>
+<LINK 
+href="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/ie.css" 
+type=text/css rel=stylesheet><LINK 
+href="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/default.css" 
+type=text/css rel=stylesheet><LINK 
+href="D:\VSTUDIO.NET\Nueva carpeta\Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos\default(1).css" 
+type=text/css rel=stylesheet><LINK 
+href="D:\VSTUDIO.NET\Nueva carpeta\Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos\default(2).css" 
+type=text/css rel=stylesheet>
+<SCRIPT language=JavaScript><!--
+   function BrowserData()
+{
+		this.userAgent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727)";
+
+		this.bot = false;
+
+		this.browser = "MSIE";
+
+		this.majorVer = 6;
+
+		this.minorVer = "0";
+
+		this.betaVer = "0";
+
+		this.platform = "NT";
+
+		this.platVer = "5.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727";
+
+		this.getsNavBar = true;
+
+		this.doesActiveX = true;
+
+		this.doesPersistence = true;
+
+		this.fullVer = 6;
+
+   }
+
+   var oBD = new BrowserData();
+
+   //--></SCRIPT>
+
+<SCRIPT language=javascript><!--
+
+	var ToolBar_Supported = ToolBar_Supported ;
+		if (ToolBar_Supported != null && ToolBar_Supported == true)
+		{
+
+		Frame_Supported = false;
+		setMSBanner("mslogo003399.gif","/isapi/gomscom.asp?target=/","microsoft.com Home");
+		setICPBanner("/spanish/msdn/images/bnrMSDN.gif","/spanish/msdn/","MSDN");
+		setToolbarBGColor("#003399");
+		setMSMenuFont("xx-small Verdana");
+		setDefaultMSMenuColor("#000000","#FFFFFF","#FF0000");
+		setDefaultICPMenuColor("#003399","#FFFFFF","#FF3300");
+		addMSMenu("ProductosMenu","Productos","","");
+		addMSSubMenu("ProductosMenu","Catálogo de productos","/spanish/msdn/catalogo.asp");
+		addMSSubMenu("ProductosMenu","Area de descarga","/isapi/gomscom.asp?target=/Spain/Descarga/");
+		addMSSubMenuLine("ProductosMenu");
+		addMSSubMenu("ProductosMenu","Windows","/spanish/msdn/windows.asp");
+		addMSSubMenu("ProductosMenu","Office","/spanish/msdn/office.asp");
+		addMSSubMenu("ProductosMenu","Consumo","/spanish/msdn/consumo.asp");
+		addMSSubMenu("ProductosMenu","Servidores","/net/default.ASP");
+		addMSSubMenu("ProductosMenu","Accesibilidad","/spanish/msdn/accesibilidad.asp");
+		addMSMenu("SoporteMenu","Soporte","","");
+		addMSSubMenu("SoporteMenu","Soporte Técnico","/spanish/msdn/soporte.asp");
+		addMSSubMenu("SoporteMenu","Knowledge Base","http://support.microsoft.com/default.aspx?scid=fh;ES-ES;kbinfo");
+		addMSMenu("BuscarMenu","Búsqueda","","");
+		addMSSubMenu("BuscarMenu","Buscar en microsoft.com","/spanish/msdn/buscar.asp");
+		addMSMenu("GuiaMenu","Guía de Microsoft.com","","");
+		addMSSubMenu("GuiaMenu","Contacte con nosotros","/spanish/msdn/contacto.asp");
+		addMSSubMenu("GuiaMenu","microsoft.com Spain","http://www.microsoft.com/spain/");
+		addMSSubMenu("GuiaMenu","microsoft.com Latam","http://www.microsoft.com/latam/");
+		addMSSubMenu("GuiaMenu","microsoft.com Corp","http://www.microsoft.com");
+		addMSSubMenu("GuiaMenu","MSN Home","http://www.msn.com");
+		addMSSubMenuLine("GuiaMenu");
+		addMSSubMenu("GuiaMenu","Eventos","/spanish/msdn/eventos/default.asp");
+		addMSSubMenu("GuiaMenu","Boletines gratuitos","/spanish/msdn/msdnflash.asp");
+		addMSSubMenu("GuiaMenu","Centro de personalización","/info/latam/privacy.htm");
+		addMSSubMenu("GuiaMenu","Entrenamiento y Certificación","/spanish/msdn/formacion.asp");
+		addMSSubMenu("GuiaMenu","Correo electrónico gratuito","http://www.hotmail.com");
+		addICPMenu("icpHome","Inicio","","/spanish/msdn/");
+		addICPMenu("icpArt","MSDN Library","","http://msdn.microsoft.com/library/default.asp");
+		addICPMenu("icpPres","Descarga","","/spanish/msdn/descarga/default.asp");
+		addICPMenu("icpEventos","Centros de desarrollo","","/spanish/msdn/centros_dev/default.asp");
+		addICPMenu("icpMapa","Eventos","","/spanish/msdn/eventos/default.asp");
+		addICPMenu("icpInter","Mapa","","/spanish/msdn/mapa/default.asp");
+		addICPMenu("icpInter","Países","","/spanish/msdn/latam/paises.asp");
+		addICPMenu("icpInter","Contacto","","/spanish/msdn/cartas.asp");
+		}
+
+	//--></SCRIPT>
+<LINK 
+href="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/css.aspx" 
+type=text/css rel=stylesheet>
+<SCRIPT language=javascript>
+var doImage=doImage;var TType=TType;
+function mhHover(tbl,idx,cls){var t,d;if(document.getElementById)t=document.getElementById(tbl);else t=document.all(tbl);if(t==null)return;if(t.getElementsByTagName)d=t.getElementsByTagName("TD");else d=t.all.tags("TD");if(d==null)return;if(d.length<=idx)return;d[idx].className=cls;}
+function footerjs(doc){if(doImage==null){var tt=TType==null?"PV":TType;doc.write('<layer visibility="hide"><div style="display:none"><img src="http://c.microsoft.com/trans_pixel.asp?source=www&TYPE=' + tt + '&p=spanish_msdn_articulos_archivo_311002_voices&URI=%2flibrary%2ftoolbar%2f3.0%2fasp.aspx%3fmode%3dhead%26c%3d%2fspanish%2fmsdn%2fshell.config%26h%3dwww%252Emicrosoft%252Ecom%26u%3d%252Fspanish%252Fmsdn%252Farticulos%252Farchivo%252F311002%252Fvoices%252Fxpthemeaddin%252Easp%26r%3dhttp%253A%252F%252Fwww%252Egoogle%252Ecl%252Fsearch%253Fhl%253Des%2526q%253Dtodo%252Blas%252Bfunciones%252Bcon%252Bstring%252Ben%252Bvisual%252Bestudio%252Bnet%2526meta%253Dlr%25253Dlang%255Fes&GUID=1F4FC18C-F71E-47FB-8FC9-612F8EE59C61&r=http%3a%2f%2fwww.google.cl%2fsearch%3fhl%3des%26q%3dtodo%2blas%2bfunciones%2bcon%2bstring%2ben%2bvisual%2bestudio%2bnet%26meta%3dlr%253Dlang_es&lc=es" width=0 height=0 hspace=0 vspace=0 border=0 alt=""/></div></layer>');}}
+</SCRIPT>
+
+<SCRIPT type=text/javascript>msvi_qllc = "es";msvi_qldir = "LTR";msvi_qlhost = "http://www.microsoft.com";</SCRIPT>
+<LINK 
+href="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/ql.css" 
+type=text/css rel=stylesheet>
+<SCRIPT 
+src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/ql.js" 
+type=text/javascript></SCRIPT>
+
+<META content=_spanish_ name=WT.sp>
+<META content="MSHTML 6.00.2800.1561" name=GENERATOR></HEAD>
+<BODY text=#000000 bgColor=#ffffff leftMargin=0 topMargin=0 MARGINWIDTH="0" 
+MARGINHEIGHT="0">
+<DIV id=msviMasthead>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="100%">
+      <TABLE height=22 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD id=msviRegionIdGraphic bgColor=#ffffff><IMG title="" height=22 
+            alt=España 
+            src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/text.jpg" 
+            border=0></TD>
+          <TD id=msviRegionGradient1 
+          style="FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#98B2E6', gradientType='1')" 
+          width="50%"></TD>
+          <TD id=msviRegionGradient2 
+          style="FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#98B2E6', endColorStr='#3568CC', gradientType='1')" 
+          width="50%"></TD></TR></TBODY></TABLE></TD>
+    <TD id=msviGlobalToolbar dir=ltr noWrap align=left bgColor=#3568cc 
+height=22>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=gt0 id=panelTd noWrap><A 
+            href="http://www.microsoft.com/library/toolbar/3.0/sitemap/es-es.mspx">Enlaces&nbsp;</A>
+            <SCRIPT>document.write('<img src="/library/mnp/2/gif/ql.gif" width="11px" height="4px" alt="">');</SCRIPT>
+
+            <DIV id=panelDiv 
+            style="Z-INDEX: 100; VISIBILITY: hidden; POSITION: absolute"></DIV></TD>
+          <TD class=gtsep>|</TD>
+          <TD class=gt0 onmouseover="this.className='gt1'" 
+          onmouseout="this.className='gt0'" noWrap><A 
+            href="http://www.microsoft.com/spain">Inicio</A></TD>
+          <TD class=gtsep>|</TD>
+          <TD class=gt0 onmouseover="this.className='gt1'" 
+          onmouseout="this.className='gt0'" noWrap><A 
+            href="http://www.microsoft.com/worldwide/">Otros paises</A></TD>
+          <TD class=msviPPSpace></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width="100%">
+      <TABLE height=42 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR vAlign=top>
+          <TD id=msviBrandBanner bgColor=#ffffff><A 
+            href="http://www.microsoft.com/spain/"><IMG title="" height=42 
+            alt=Microsoft 
+            src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/msdn_masthead_ltr.gif" 
+            width=225 border=0></A></TD>
+          <TD 
+          style="FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#6799FF', gradientType='1')" 
+          width="100%"></TD></TR></TBODY></TABLE></TD>
+    <TD id=msviGlobalSearch bgColor=#6799ff>Buscar en Microsoft.com:<BR>
+      <FORM id=msviSearchForm action=/library/toolbar/3.0/search.aspx 
+      target=_top><INPUT type=hidden value=es-es name=View><INPUT type=hidden 
+      value=iso-8859-1 name=charset><NOBR>
+      <DIV style="HEIGHT: 18px"><INPUT id=msviSearchBox maxLength=255 name=qu><INPUT id=msviGoButton type=submit value=Ir></DIV></NOBR></FORM></TD></TR></TBODY></TABLE>
+<DIV id=msviMastheadHR></DIV></DIV>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top align=left width=180 height="100%">
+      <TABLE height="100%" cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top></TD></TR>
+        <TR>
+          <TD vAlign=top height="100%">
+            <TABLE class=flyoutMenu cellSpacing=0 cellPadding=2 width=180 
+            border=0 xmlns:msxsl="urn:schemas-microsoft-com:xslt" 
+            menudata="/spanish/msdn/menu.xml">
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=flyoutLink handle="productos"><A 
+                        href="http://www.microsoft.com/spanish/msdn/principal.asp">Productos 
+                        y Tecnologías</A> </TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=flyoutLink handle="suscripcion"><A 
+                        href="http://www.microsoft.com/spanish/msdn/suscripcion/default.asp">MSDN 
+                        Suscripciones</A> </TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=flyoutLink handle=""><A 
+                        href="http://www.microsoft.com/spanish/msdn/arquitectura/default.asp">Arquitectura</A> 
+                      </TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=flyoutLink handle="centro"><A 
+                        href="http://www.microsoft.com/spanish/msdn/centro_recursos/default.asp">Centros 
+                        de Desarrollo</A> </TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=flyoutLink handle="informacion"><A 
+                        href="http://www.microsoft.com/spanish/msdn/informaciontecnica.asp">Información 
+                        Técnica</A> </TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=flyoutLink handle="academico"><A 
+                        href="http://www.microsoft.com/spanish/msdn/academico.asp">MSDN 
+                        Académico</A> </TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=flyoutLink handle=""><A 
+                        href="http://www.microsoft.com/spanish/msdn/uni.net.asp">Universidad 
+                        .NET</A> </TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=flyoutLink handle=""><A 
+                        href="http://www.microsoft.com/spanish/msdn/eventos/">Eventos</A> 
+                      </TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=flyoutLink handle="comunidad"><A 
+                        href="http://www.microsoft.com/spanish/msdn/comunidad.asp">Comunidad 
+                        Online</A> </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <TABLE class=flyoutMenu cellSpacing=0 cellPadding=2 width=180 
+            border=0 xmlns:msxsl="urn:schemas-microsoft-com:xslt" 
+            menudata="/spanish/msdn/menu.xml">
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=flyoutLink handle="partnering"><A 
+                        href="http://www.microsoft.com/spanish/msdn/formacion.asp">Partnering 
+                        y Certificación</A> </TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=flyoutLink handle=""><A 
+                        href="http://www.microsoft.com/spanish/msdn/TechNet.asp">TechNet</A> 
+                      </TD></TR></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=flyoutLink handle="soporte"><A 
+                        href="http://support.microsoft.com/default.aspx">Soporte 
+                        Técnico</A> </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <TABLE class=adbar height="100%" cellSpacing=0 cellPadding=0 
+            width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD 
+      height="100%">&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top align=left>
+      <TABLE height=23 cellSpacing=0 cellPadding=0 width="100%" bgColor=#6699cc 
+      border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=center noWrap align=right width="100%"><FONT 
+            color=#ffffff>Artículos técnicos en Español&nbsp;</FONT> 
+        </TD></TR></TBODY></TABLE>
+      <TABLE height=24 cellSpacing=0 cellPadding=4 width="100%" bgColor=#ffffff 
+      border=0>
+        <TBODY>
+        <TR>
+          <TD class=eyebrow vAlign=center align=left width="100%">&nbsp;&nbsp; 
+            <A class=small 
+            href="http://www.microsoft.com/spanish/msdn/default.asp" 
+            target=_top>Inicio MSDN</A>&nbsp;&gt;&nbsp; <A class=small 
+            href="http://www.microsoft.com/spanish/msdn/articulos/default.asp" 
+            target=_top>Artículos técnicos en español</A><A 
+            href="http://www.microsoft.com/spanish/msdn/articulos/archivo/311002/voices/"></A> 
+          </TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR><BR><BR><!-- Begin: Content --></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0 valign="top">
+        <TBODY>
+        <TR>
+          <TD class=fontsize4 vAlign=top colSpan=2>
+          <TD class=fontsize4 vAlign=top width="1%"></TD>
+          <TD class=fontsize4 vAlign=top width="98%" colSpan=2>
+            <TABLE>
+              <TBODY>
+              <TR>
+                <TD>
+                  <H2 class=dtH1><A name=xpthemeaddin_></A>Creación de un 
+                  complemento de Visual Studio .NET para proporcionar 
+                  compatibilidad con el tema de Windows XP</H2>
+                  <DIV></DIV>
+                  <DIV></DIV><!--NONSCROLLING BANNER END-->
+                  <DIV id=nstext valign="bottom">
+                  <DIV id=smpMgrCell style="FLOAT: right; WIDTH: 230px"></DIV>
+                  <P>Duncan Mackenzie<BR>Microsoft Developer Network</P>
+                  <P>(Consulte el perfil de Duncan en <A 
+                  href="http://www.gotdotnet.com/Community/User/viewprofile.aspx?userid=00011A674C38C375">GotDotNet</A> 
+                  (en inglés).)</P>
+                  <P>Julio de 2002</P>
+                  <P><B>Resumen:</B> utilice Windows Forms para crear un 
+                  complemento de Microsoft Visual Studio .NET que configure 
+                  automáticamente el código para usar la apariencia de Microsoft 
+                  Windows XP. (26 páginas impresas.)</P>
+                  <P>Este artículo se aplica a:<BR>&nbsp;&nbsp;&nbsp;Microsoft® 
+                  Visual Studio® .NET<BR>&nbsp;&nbsp;&nbsp;Microsoft® Windows® 
+                  XP<BR>&nbsp;&nbsp;&nbsp;Windows Forms</P>
+                  <P>Puede descargar el <A 
+                  href="http://msdn.microsoft.com/code/default.asp?url=/code/sample.asp?url=/MSDN-FILES/026/002/849/msdncompositedoc.xml">código 
+                  de ejemplo de XPThemeSupport.exe</A> (en inglés) desde MSDN 
+                  Code Center.</P></DIV></TD>
+                <TD vAlign=top>
+                  <TABLE><LINK 
+                    href="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/estilo.css" 
+                    type=text/css rel=stylesheet>
+                    <TBODY></TBODY></TABLE>
+                  <TABLE cellSpacing=0 cellPadding=0 width=162 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=35 
+                        src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/PbBox_Top.gif" 
+                        width=162></TD></TR>
+                    <TR>
+                      <TD 
+                      background="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/PbBox_Fill.gif">
+                        <TABLE cellSpacing=0 cellPadding=1>
+                          <TBODY>
+                          <TR>
+                            <TD><SELECT class=select id=cmbCalif> <OPTION 
+                                value=1>Muy Malo</OPTION> <OPTION 
+                                value=2>Malo</OPTION> <OPTION value=3 
+                                selected>Normal</OPTION> <OPTION 
+                                value=4>Bueno</OPTION> <OPTION 
+                                value=5>Excelente</OPTION></SELECT> </TD>
+                            <TD>
+                              <TABLE class=Boton height=20 cellSpacing=0 
+                              cellPadding=0 border=0>
+                                <TBODY>
+                                <TR>
+                                <TD width=20 rowSpan=2><IMG 
+                                id=btnCalificar_imgIcon 
+                                onclick="window.open('Http://www.panoramabox.com/detalle.aspx?IdObj=370&amp;Calif=' + document.all['cmbCalif'].value)" 
+                                height=20 
+                                src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/btn_ok.gif" 
+                                width=20></TD>
+                                <TD height=2></TD>
+                                <TD width=6 rowSpan=2><IMG height=20 
+                                src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/btn_close.gif" 
+                                width=6></TD></TR>
+                                <TR>
+                                <TD class=Back noWrap height=18><SPAN 
+                                class=texto id=btnCalificar_spnLink 
+                                onclick=btnCalificar_imgIcon.click()>Calificar</SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR class=Title height=2>
+                      <TD 
+                      background="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/PbBox_Fill.gif"></TD></TR>
+                    <TR>
+                      <TD 
+                      background="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/PbBox_Fill.gif">
+                        <TABLE cellSpacing=0 cellPadding=0 width=162 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=6><IMG height=21 
+                              src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/Bar_Open.gif" 
+                              width=6></TD>
+                            <TD id=tdFind width=150 
+                            background="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/Bar_Fill.gif">
+                              <TABLE cellSpacing=0 cellPadding=0 border=0>
+                                <TBODY>
+                                <TR>
+                                <TD><INPUT class=input 
+                                onkeypress="if(window.event.keyCode==13){imgBusqueda.click();return false;}" 
+                                id=txtBusqueda style="WIDTH: 129px"></TD>
+                                <TD style="PADDING-LEFT: 2px"><IMG 
+                                id=imgBusqueda style="CURSOR: hand" 
+                                onclick="window.open('Http://www.panoramabox.com/BusquedaSimple.aspx?ExternalKb=' + txtBusqueda.value)" 
+                                height=19 alt=Buscar 
+                                src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/search.gif" 
+                                width=19></TD></TR></TBODY></TABLE></TD>
+                            <TD width=6><IMG height=21 
+                              src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/Bar_Close.gif" 
+                              width=6></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD align=middle 
+                      background="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/PbBox_Fill.gif">
+                        <TABLE class=box cellSpacing=0 cellPadding=0 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=left><A class=enlace 
+                              href="http://www.panoramabox.com/MiPanorama.aspx">Mi 
+                              Panorama</A> </TD>
+                            <TD align=right><A class=enlace 
+                              href="http://www.panoramabox.com/QueEsSOS.aspx">SOS</A> 
+                            </TD></TR>
+                          <TR>
+                            <TD align=middle colSpan=2><A class=enlace 
+                              href="http://www.panoramabox.com/QueEsEscribeParaNosotros.aspx">Escribe 
+                              para Nosostros</A> </TD></TR></TBODY></TABLE></TD></TR>
+                    <TR class=titulo height=5>
+                      <TD 
+                      background="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/PbBox_Bottom.gif"></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <TABLE>
+              <TBODY>
+              <TR>
+                <TD>
+                  <BLOCKQUOTE 
+                    class=dtBlock><I><B>Nota</B><CODE>&nbsp;&nbsp;&nbsp;</CODE>Este 
+                    ejemplo está basado en el código de Mark Boulter, 
+                    administrador de programas para Windows Forms. Tenga en 
+                    cuenta que los comentarios del programador están en inglés 
+                    en los archivos de la aplicación de ejemplo pero se han 
+                    traducido en el artículo por motivos de 
+                  comprensión.</I></BLOCKQUOTE>
+                  <H4 class=dtH1>Contenido</H4>
+                  <P><A 
+                  href="http://www.microsoft.com/spanish/msdn/articulos/archivo/311002/voices/xpthemeaddin.asp#xpthemeaddin_topic1" 
+                  target=_self>Introducción</A><CODE><BR></CODE><A 
+                  href="http://www.microsoft.com/spanish/msdn/articulos/archivo/311002/voices/xpthemeaddin.asp#xpthemeaddin_topic2" 
+                  target=_self>Diseño del complemento</A><CODE><BR></CODE><A 
+                  href="http://www.microsoft.com/spanish/msdn/articulos/archivo/311002/voices/xpthemeaddin.asp#xpthemeaddin_topic3" 
+                  target=_self>Descomposición de la 
+                  implementación</A><CODE><BR></CODE><A 
+                  href="http://www.microsoft.com/spanish/msdn/articulos/archivo/311002/voices/xpthemeaddin.asp#xpthemeaddin_topic4" 
+                  target=_self>Implementación de las funciones para la 
+                  compatibilidad con el tema</A><CODE><BR></CODE><A 
+                  href="http://www.microsoft.com/spanish/msdn/articulos/archivo/311002/voices/xpthemeaddin.asp#xpthemeaddin_topic5" 
+                  target=_self>Resumen</A></P>
+                  <H3 class=dtH1><A 
+                  name=xpthemeaddin_topic1></A>Introducción</H3>
+                  <P>Algunos de los elementos comunes de la interfaz de usuario 
+                  de Microsoft Windows tienen una nueva apariencia en Windows XP 
+                  (consulte la figura 1 (estilo nuevo) y la figura 2 (estilo 
+                  anterior)) aunque no todos los aspectos de esta nueva 
+                  apariencia se aplicarán automáticamente a todas las 
+                  aplicaciones.</P>
+                  <P class=fig><CODE><IMG height=300 alt="" 
+                  src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/xpthemeaddin_01.gif" 
+                  width=300 border=0></CODE></P>
+                  <P class=label><B>Figura 1. Visualización de una aplicación 
+                  Windows Forms con el tema de XP</B></P>
+                  <P class=fig><CODE><IMG height=300 alt="" 
+                  src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/xpthemeaddin_02.gif" 
+                  width=300 border=0></CODE></P>
+                  <P class=label><B>Figura 2. Visualización del mismo formulario 
+                  sin compatibilidad con el tema de XP</B></P>
+                  <P>Para evitar problemas de compatibilidad (puesto que los 
+                  controles de estilo de XP forman parte de una nueva versión de 
+                  Windows Common Controls), las aplicaciones no utilizan 
+                  automáticamente los estilos de XP. En su lugar, una aplicación 
+                  que pretenda establecer un vínculo con la versión actualizada 
+                  de Common Controls tendrá que indicarlo expresamente mediante 
+                  un archivo de manifiesto o un recurso especial incrustado en 
+                  la aplicación.</P>
+                  <BLOCKQUOTE class=dtBlock><B 
+                    class=le>Nota</B><CODE>&nbsp;&nbsp;&nbsp;</CODE>Los archivos 
+                    de manifiesto son documentos XML especiales utilizados para 
+                    especificar que una aplicación puede o debe utilizar una 
+                    versión concreta de una biblioteca, cuando existe la 
+                    posibilidad de que haya instaladas varias versiones de la 
+                    misma al mismo tiempo. En lo que se refiere a los estilos de 
+                    la interfaz de usuario de XP, la biblioteca en cuestión es 
+                    Windows Common Controls y los controles anteriores a XP se 
+                    han instalado lado a lado (es decir, las dos versiones están 
+                    instaladas simultáneamente) con los nuevos estilos temáticos 
+                    de XP. Consulte esta referencia para obtener más 
+                  información.</BLOCKQUOTE>
+                  <P>El archivo de manifiesto debe tener un nombre correcto 
+                  (&lt;nombre del archivo .exe&gt;.manifest) y estar ubicado en 
+                  el mismo directorio que el archivo .exe para que la aplicación 
+                  tenga la apariencia adecuada. Crear el archivo es fácil, ya 
+                  que el contenido (documentado en este artículo) es el mismo 
+                  para cualquier aplicación; sin embargo, copiarlo en el 
+                  directorio correcto y asegurarse de que tiene el nombre 
+                  adecuado cada vez que lo genera puede resultar pesado. En este 
+                  artículo se muestra cómo simplificar esta tarea, a la vez que 
+                  se enseña cómo crear un complemento de Microsoft Visual Studio 
+                  .NET al mismo tiempo.</P>
+                  <H3 class=dtH1><A name=xpthemeaddin_topic2></A>Diseño del 
+                  complemento</H3>
+                  <P>Los requisitos detallados para que la aplicación utilice 
+                  los controles del tema de Windows XP se tratan a fondo en el 
+                  artículo de Seth Grossman <A 
+                  href="http://msdn.microsoft.com/library/en-us/dv_vstechart/html/vbtchUsingWindowsXPVisualStylesWithControlsOnWindowsForms.asp">Using 
+                  Windows XP Visual Styles with Controls on Windows Forms</A> 
+                  (en inglés), por lo que no nos extenderemos más sobre ese 
+                  tema. En primer lugar, debemos asegurarnos de que el archivo 
+                  de manifiesto (con un nombre válido), que contiene información 
+                  precisa, se encuentra en el mismo directorio que el archivo 
+                  .exe. En segundo lugar, se debe tener en cuenta que algunos 
+                  controles sólo adoptan la apariencia del estilo de XP si la 
+                  propiedad <A 
+                  href="http://msdn.microsoft.com/library/en-us/cpref/html/frlrfSystemWindowsFormsFlatStyleClassTopic.asp">FlatStyle</A> 
+                  (en inglés) está establecida en <B>System</B>. Para solucionar 
+                  estos problemas, será necesario crear un complemento de Visual 
+                  Studio .NET que pueda responder a los eventos <B>Build</B> 
+                  para copiar el archivo de manifiesto cada vez que se compile 
+                  el proyecto y establecer la propiedad <B>FlatStyle</B> en 
+                  <B>System</B> para los controles que lo necesiten.</P>
+                  <P>Además de estos dos requisitos, también es necesario 
+                  agregar y manipular algunos elementos de menú. Mediante estos 
+                  elementos, el usuario podrá habilitar o deshabilitar 
+                  selectivamente el complemento para proyectos específicos, ya 
+                  que no todos los proyectos se desarrollarán para Windows XP. 
+                  Al crear los elementos de la interfaz de usuario y controlar 
+                  su visibilidad en función de los objetos seleccionados 
+                  actualmente en Visual Studio (seguramente no desea que estén 
+                  disponibles a menos que se haya seleccionado un proyecto), se 
+                  agregará tanto código a la solución final como los dos 
+                  requisitos anteriores. </P>
+                  <H3 class=dtH1><A name=xpthemeaddin_topic3></A>Descomposición 
+                  de la implementación</H3>
+                  <P>Gracias a los requisitos anteriores, ahora se sabe qué 
+                  tareas de programación son necesarias para el complemento. En 
+                  general, las siguientes tareas resultan útiles en distintos 
+                  proyectos de complementos: 
+                  <UL type=disc>
+                    <LI>Agregar elementos de menú a Visual Studio .NET 
+                    <LI>Determinar si un proyecto está seleccionado actualmente 
+                    <LI>Manipular los elementos anteriormente mencionados 
+                    <LI>Responder a los clics en dichos elementos 
+                    <LI>Agregar propiedades personalizadas a los proyectos de 
+                    Visual Studio .NET 
+                    <LI>Responder a eventos generados por Visual Studio .NET 
+                    </LI></UL>
+                  <P>Algunas tareas son específicas del ejemplo de 
+                  compatibilidad con el tema de XP, de modo que las trataré por 
+                  separado al final de esta sección de implementación: 
+                  <UL type=disc>
+                    <LI>Establecer propiedades de control desde el complemento 
+                    <LI>Crear y copiar un archivo de manifiesto en el directorio 
+                    de salida </LI></UL>
+                  <P>Cada una de estas tareas se tratarán individualmente pero, 
+                  antes de entrar en materia, es necesario crear el proyecto de 
+                  complemento de Visual Studio .NET.</P>
+                  <H3 class=dtH1>Introducción</H3>
+                  <P>Para crear un proyecto de complemento se proporcionan 
+                  varios asistentes prácticos en Otros proyectos\Proyectos de 
+                  extensibilidad. Si desea crear un complemento específico para 
+                  Visual Studio .NET, en lugar de uno que se pueda utilizar en 
+                  cualquier conjunto de aplicaciones que admitan el mismo modelo 
+                  de complemento, deberá seleccionar un proyecto de complemento 
+                  de Visual Studio .NET. Aunque ninguno de estos elementos 
+                  funcionará (ambos pueden crear complementos para alojarlos en 
+                  Visual Studio .NET), el código producido por el asistente 
+                  específico de Visual Studio es ligeramente más fácil de 
+                  utilizar. Debido a que sólo se centra en un host, el asistente 
+                  podrá utilizar variables con tipos inflexibles en ubicaciones 
+                  en las que el asistente Complemento compartido tenga que usar 
+                  <B>Object</B>.</P>
+                  <P>Para comenzar con el complemento de compatibilidad con el 
+                  tema de XP, seleccioné el tipo <B>Complemento de Visual Studio 
+                  .NET</B>, establecí el nombre del proyecto en "XPThemeSupport" 
+                  e hice clic en <B>Aceptar</B>. A continuación, se inició un 
+                  asistente, en el que pude seleccionar el lenguaje en el que 
+                  deseaba programar el complemento (Microsoft Visual Basic®, C# 
+                  o C++, según los lenguajes que se hayan instalado) y los hosts 
+                  de Visual Studio (las opciones serán normalmente el propio 
+                  Visual Studio o el entorno de desarrollo de macros de Visual 
+                  Studio) en los que deseaba que apareciera el complemento. Yo 
+                  seleccioné Visual Basic .NET, pero se puede elegir cualquier 
+                  otro. Para los hosts, seleccione la opción de Visual Studio 
+                  .NET para registrar el complemento a fin de que se ejecute 
+                  dentro del entorno de desarrollo principal de Visual 
+                  Studio.</P>
+                  <BLOCKQUOTE class=dtBlock><B 
+                    class=le>Nota</B><CODE>&nbsp;&nbsp;&nbsp;</CODE>Aunque he 
+                    escrito este complemento en Visual Basic .NET, funcionará en 
+                    cualquier tipo de proyecto de Visual Studio, tanto en Visual 
+                    Basic .NET como en C#. </BLOCKQUOTE>
+                  <P>Necesitará introducir un nombre y una descripción y, a 
+                  continuación, establecer algunas opciones. Decidí seleccionar 
+                  sólo "Me gustaría que se cargara al iniciar la aplicación 
+                  host". Aunque deseo utilizar algunos elementos de menú, aún no 
+                  selecciono la opción para crear un elemento de menú 
+                  Herramientas, ya que si agrego varios elementos me resulta más 
+                  fácil escribir mi propio código. Otra opción clave de este 
+                  cuadro de diálogo incluye la generación desde la línea de 
+                  comandos; no tendrá compatibilidad con este tipo de generación 
+                  si la aplicación puede mostrar un cuadro de diálogo modal 
+                  (incluido un cuadro de mensaje). Cualquier forma de interfaz 
+                  de usuario modal detendría la generación desde la línea de 
+                  comandos y la obligaría a esperar la interacción del usuario 
+                  antes de poder continuar; ésta no es la mejor situación para 
+                  una generación automática cuando el usuario se encuentra 
+                  ausente.</P>
+                  <BLOCKQUOTE class=dtBlock><B 
+                    class=le>Nota</B><CODE>&nbsp;&nbsp;&nbsp;</CODE>Las opciones 
+                    especificadas en este asistente se almacenarán en el 
+                    registro, en 
+                    HKCU\Software\Microsoft\VisualStudio\7.0\AddIns\&lt;nombre 
+                    del complemento&gt;.Connect y se configurarán como parte del 
+                    proyecto de instalación del complemento que se agregará a la 
+                    solución cuando finalice el asistente.</BLOCKQUOTE>
+                  <P>A continuación, tendrá que especificar la información que 
+                  describa el complemento, que aparecerá en el cuadro de diálogo 
+                  <B>Acerca de</B> de Visual Studio, ya que la entrada 
+                  correspondiente se completará con el icono y la descripción 
+                  introducida. No utilice retornos, ya que no se visualizarán 
+                  correctamente en el cuadro de diálogo <B>Acerca de</B> de 
+                  Visual Studio; para ello se proporciona la función de ajuste 
+                  de línea.</P>
+                  <P class=fig><CODE><IMG height=81 alt="" 
+                  src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/xpthemeaddin_03.gif" 
+                  width=451 border=0></CODE></P>
+                  <P class=label><B>Figura 3. La información descriptiva 
+                  introducida se muestra como parte del cuadro de diálogo Acerca 
+                  de en Visual Studio</B></P>
+                  <P>Con esto finalizará el asistente. Al hacer clic en 
+                  <B>Finalizar</B> después de introducir la información del 
+                  cuadro Acerca de, el asistente se cerrará y generará el código 
+                  básico para el complemento (y un proyecto de instalación 
+                  completo) en función de las opciones seleccionadas. En este 
+                  momento, dispondrá del código completo del esqueleto del 
+                  proyecto (que comentaré a continuación) y podrá comenzar a 
+                  agregar la funcionalidad específica.</P>
+                  <H3 class=dtH1>Descripción del código del complemento</H3>
+                  <P>El código creado por el asistente para complementos está 
+                  formado por una única clase, <B>Connect</B>, que implementa la 
+                  interfaz <A 
+                  href="http://msdn.microsoft.com/library/en-us/vsintro7/html/vxlrfIDTExtensibility2Interface.asp">IDTExtensibility2</A> 
+                  (en inglés). La implementación de esta interfaz es lo que 
+                  permite a las aplicaciones host cargar esta clase como 
+                  complemento; asimismo, toda la interacción entre el host y el 
+                  código se inicia a través de los métodos de esta interfaz. 
+                  Aunque todos los métodos son importantes, es posible (y así lo 
+                  haré) implementar un complemento únicamente mediante el método 
+                  <A 
+                  href="http://msdn.microsoft.com/library/en-us/vsintro7/html/vxlrfOnConnectionMethod.asp">OnConnection</A> 
+                  (en inglés). Se llama a este método cuando Visual Studio .NET 
+                  carga el complemento; además, es la ubicación ideal para 
+                  controlar la adición de los menús y para empezar a agregar 
+                  controladores de eventos para todos los eventos del entorno de 
+                  desarrollo integrado (IDE) que le interesen. Los parámetros 
+                  que se han de pasar a <B>OnConnection</B> incluyen la 
+                  aplicación host, que será una instancia de <A 
+                  href="http://msdn.microsoft.com/library/en-us/vsintro7/html/vxlrfDTEObject.asp">EnvDTE.DTE</A> 
+                  (en inglés), que representa a Visual Studio, ya que este 
+                  complemento sólo se puede alojar dentro de una aplicación. Si 
+                  está creando un complemento compartido, este objeto de la 
+                  aplicación podrá ser el objeto raíz de cualquiera de las 
+                  distintas aplicaciones, de manera que no podrá convertirlo a 
+                  una variable con tipo inflexible. Para facilitar la 
+                  comprensión, no realizaré directamente ninguna modificación en 
+                  el método <B>OnConnection</B>; en su lugar, escribiré otra 
+                  clase que contenga todo el código personalizado para crear 
+                  posteriormente una instancia de dicha clase en el método 
+                  <B>OnConnection</B>. La nueva clase necesitará tener acceso al 
+                  objeto de la aplicación pasado a <B>OnConnection</B>, así que 
+                  se incluirá como componente obligatorio del constructor de la 
+                  clase.</P><PRE class=code><PRE class=code><FONT color=#000000>
+</FONT><FONT color=#0000ff>Public Class </FONT><FONT color=#000000>ThemeSupport
+    </FONT><FONT color=#0000ff>Private </FONT><FONT color=#000000>hostApplication </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.DTE
+
+    </FONT><FONT color=#0000ff>Public Sub New</FONT><FONT color=#000000>(</FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>application </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.DTE)
+        hostApplication = application
+        CreateMenuItems()
+        UpdateUI()
+        SetupEvents()
+    </FONT><FONT color=#0000ff>End Sub
+End Class
+</FONT>
+</PRE></PRE>
+                  <P>A continuación, pasaré el objeto de la aplicación cuando 
+                  cree una instancia de la clase en el método 
+                  <B>OnConnection</B>.</P><PRE class=code><PRE class=code><FONT color=#000000>
+</FONT><FONT color=#0000ff>Public Sub </FONT><FONT color=#000000>OnConnection(</FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>application </FONT><FONT color=#0000ff>As Object</FONT><FONT color=#000000>, _
+        </FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>connectMode </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>Extensibility.ext_ConnectMode, _
+        </FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>addInInst </FONT><FONT color=#0000ff>As Object</FONT><FONT color=#000000>, _
+        </FONT><FONT color=#0000ff>ByRef </FONT><FONT color=#000000>custom </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>System.Array) _
+        </FONT><FONT color=#0000ff>Implements </FONT><FONT color=#000000>IDTExtensibility2.OnConnection
+    </FONT><FONT color=#008000>'Basta con declarar la clase, ya que su constructor
+    'inicia todos los objetos necesarios.
+    </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>theme </FONT><FONT color=#0000ff>As New </FONT><FONT color=#000000>ThemeSupport(</FONT><FONT color=#0000ff>CType</FONT><FONT color=#000000>(application, EnvDTE.DTE))
+</FONT><FONT color=#0000ff>End Sub
+
+</FONT>
+</PRE></PRE>
+                  <P>Puesto que voy a controlar todos los elementos de la clase 
+                  que he creado, he eliminado las variables locales 
+                  (<B>applicationObject</B> y <B>addInInstance</B>) del código 
+                  generado automáticamente, reemplazando el método completo por 
+                  una única línea que crea una instancia de la clase 
+                  <B>ThemeSupport</B>.</P>
+                  <H3 class=dtH1>Creación de los elementos de menú</H3>
+                  <P>Los menús y barras de herramientas de Visual Studio 
+                  utilizan el modelo de objetos de Microsoft Office, en el que 
+                  las barras de herramientas están representadas por objetos <A 
+                  href="http://msdn.microsoft.com/library/en-us/off2000/html/ofobjcommandbar.asp">CommandBar</A> 
+                  (en inglés); cada uno de los elementos de los menús y barras 
+                  de herramientas son objetos <A 
+                  href="http://msdn.microsoft.com/library/en-us/off2000/html/ofobjcommandbarbutton.asp">CommandBarButton</A> 
+                  (en inglés). Para agregar los dos elementos de menú, voy a 
+                  crear dos variables <B>CommandBarButton</B> en mi clase 
+                  <B>ThemeSupport</B>, cada una declarada con la palabra clave 
+                  <A 
+                  href="http://msdn.microsoft.com/library/en-us/vbcn7/html/vaconWithEventsHandlesClause.asp">WithEvents</A> 
+                  (en inglés) para poder controlar fácilmente los eventos 
+                  <B>Click</B>. Inmediatamente después de crear la clase, crearé 
+                  estos dos botones y configuraré sus propiedades de forma 
+                  adecuada.</P><PRE class=code><PRE class=code><FONT color=#000000>
+</FONT><FONT color=#0000ff>Private WithEvents </FONT><FONT color=#000000>onButton </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>CommandBarButton
+</FONT><FONT color=#0000ff>Private WithEvents </FONT><FONT color=#000000>offButton </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>CommandBarButton
+
+</FONT><FONT color=#0000ff>Private Sub </FONT><FONT color=#000000>CreateMenuItems()
+    </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>toolsMenu </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>CommandBar
+    toolsMenu = hostApplication.CommandBars("Tools")
+
+    onButton = toolsMenu.Controls.Add( _
+            Type:=MsoControlType.msoControlButton, _
+            Temporary:=</FONT><FONT color=#0000ff>True</FONT><FONT color=#000000>)
+
+    onButton.Caption = "Turn Theme Support On"
+    onButton.Visible = </FONT><FONT color=#0000ff>False
+    </FONT><FONT color=#000000>onButton.BeginGroup = </FONT><FONT color=#0000ff>True
+
+    </FONT><FONT color=#000000>offButton = toolsMenu.Controls.Add( _
+            Type:=MsoControlType.msoControlButton, _
+            Temporary:=</FONT><FONT color=#0000ff>True</FONT><FONT color=#000000>)
+    offButton.Caption = "Turn Theme Support Off"
+    offButton.Visible = </FONT><FONT color=#0000ff>False
+End Sub
+</FONT>
+</PRE>
+</PRE>
+                  <P>He creado dos elementos de menú, etiquetados <B>Turn Theme 
+                  Support On</B> y <B>Turn Theme Support Off</B> 
+                  respectivamente, aunque sólo uno de ellos estará visible cada 
+                  vez. Tenga en cuenta que en la llamada a <A 
+                  href="http://msdn.microsoft.com/library/en-us/off2000/html/ofobjcommandbarcontrols.asp">Controls.Add</A> 
+                  (en inglés) especifico <B>Temporary:=True</B>, que indica a 
+                  Visual Studio que estos controles deben eliminarse cuando se 
+                  cierre, lo que me obliga a tener que crearlos de nuevo cada 
+                  vez; sin embargo, evita la posibilidad de tener elementos de 
+                  menú duplicados o de que permanezcan aun cuando se haya 
+                  desinstalado el complemento. Como mencioné anteriormente, los 
+                  menús y barras de herramientas de Visual Studio están 
+                  representados realmente mediante el modelo de objetos de 
+                  Office, lo cual no aparece documentado en los archivos de la 
+                  Ayuda de Visual Studio. En MSDN está disponible una <A 
+                  href="http://msdn.microsoft.com/library/en-us/off2000/html/oftocobjectmodelapplication.asp">referencia 
+                  en pantalla</A> (en inglés) para este modelo de objeto, en la 
+                  que se detalla cada uno de los objetos junto con sus 
+                  propiedades y métodos.</P>
+                  <P>El paso siguiente es observar los elementos seleccionados 
+                  actualmente en Visual Studio, determinar si un proyecto se ha 
+                  seleccionado y ajustar la apariencia de los dos elementos de 
+                  menú como corresponda.</P>
+                  <H3 class=dtH1>Comprobación de la selección actual de Visual 
+                  Studio</H3>
+                  <P>Puesto que es necesario comprobar si un proyecto está 
+                  seleccionado en distintas partes del código, decidí crear una 
+                  función <B>IsProjectSelected()</B> que devolviera <B>True</B> 
+                  en caso de que algún proyecto o elemento del proyecto 
+                  estuviera seleccionado en ese momento. El objeto <B>DTE</B> de 
+                  Visual Studio muestra una colección de <A 
+                  href="http://msdn.microsoft.com/library/en-us/vsintro7/html/vxlrfSelectedItemsPropertyGeneralExtensibility.asp">SelectedItems</A> 
+                  (en inglés), que utilicé para crear una función 
+                  <B>GetCurrentlySelectProject()</B> que devolviera el nombre 
+                  del proyecto actual o <B>Nothing</B> si no estuviera 
+                  seleccionado ningún proyecto.</P><PRE class=code><PRE class=code><FONT color=#000000>
+</FONT><FONT color=#0000ff>Private Function </FONT><FONT color=#000000>GetCurrentlySelectedProject() </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.Project
+    </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>selItems </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.SelectedItems
+    </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>selItemObj, selItem </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.SelectedItem
+    </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>selProject </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.Project
+    selItems = hostApplication.SelectedItems
+    </FONT><FONT color=#008000>' Mostrar el número de elementos seleccionados.
+    </FONT><FONT color=#0000ff>If </FONT><FONT color=#000000>selItems.Count &gt; 0 </FONT><FONT color=#0000ff>And Not </FONT><FONT color=#000000>selItems.MultiSelect </FONT><FONT color=#0000ff>Then
+        </FONT><FONT color=#008000>' Establecer una referencia al primer elemento seleccionado.
+        </FONT><FONT color=#000000>selItemObj = selItems.Item(1)
+        </FONT><FONT color=#008000>' Enumerar el nombre del proyecto 
+        ' o de los elementos del proyecto bajo los elementos 
+        ' seleccionados.
+        </FONT><FONT color=#0000ff>For Each </FONT><FONT color=#000000>selItem </FONT><FONT color=#0000ff>In </FONT><FONT color=#000000>selItemObj.Collection
+            </FONT><FONT color=#0000ff>If TypeOf </FONT><FONT color=#000000>selItem.Project </FONT><FONT color=#0000ff>Is </FONT><FONT color=#000000>EnvDTE.Project </FONT><FONT color=#0000ff>Then
+                </FONT><FONT color=#000000>selProject = selItem.Project
+            </FONT><FONT color=#0000ff>Else
+                If TypeOf </FONT><FONT color=#000000>selItem.ProjectItem _
+                    </FONT><FONT color=#0000ff>Is </FONT><FONT color=#000000>EnvDTE.ProjectItem _
+                        </FONT><FONT color=#0000ff>AndAlso </FONT><FONT color=#000000>_
+                   </FONT><FONT color=#0000ff>TypeOf </FONT><FONT color=#000000>selItem.ProjectItem.ContainingProject _
+                    </FONT><FONT color=#0000ff>Is </FONT><FONT color=#000000>EnvDTE.Project </FONT><FONT color=#0000ff>Then
+                    </FONT><FONT color=#000000>selProject = selItem.ProjectItem.ContainingProject
+                </FONT><FONT color=#0000ff>End If
+            End If
+        Next
+    End If
+    Return </FONT><FONT color=#000000>selProject
+</FONT><FONT color=#0000ff>End Function
+
+</FONT>
+</PRE>
+</PRE>
+                  <P>Una vez terminado el código, resultó fácil utilizarlo para 
+                  crear la función <B>IsProjectSelected()</B>.</P><PRE class=code><PRE class=code><FONT color=#000000>
+</FONT><FONT color=#0000ff>Private Function </FONT><FONT color=#000000>IsProjectSelected() </FONT><FONT color=#0000ff>As Boolean
+    If Not </FONT><FONT color=#000000>GetCurrentlySelectedProject() </FONT><FONT color=#0000ff>Is Nothing Then
+        Return True
+    Else
+        Return False
+    End If
+End Function
+</FONT>
+</PRE>
+</PRE>
+                  <H3 class=dtH1>Establecimiento y recuperación de propiedades 
+                  definidas por el usuario en los proyectos</H3>
+                  <P>Con <B>IsProjectSelected()</B> disponible, el siguiente 
+                  paso era encontrar la forma de almacenar un valor en cada 
+                  proyecto individual para activar o desactivar la 
+                  compatibilidad con el tema. Afortunadamente, parece que el 
+                  equipo de Visual Studio pensó en ello, y creó un conjunto de 
+                  funciones para establecer y recuperar los valores asociados a 
+                  cada proyecto concreto. Estas funciones, miembros de la 
+                  propiedad <A 
+                  href="http://msdn.microsoft.com/library/en-us/vsintro7/html/vxlrfGlobalsPropertyGeneralExtensibility.asp">Globals</A> 
+                  (en inglés) del objeto <A 
+                  href="http://msdn.microsoft.com/library/en-us/vsintro7/html/vxlrfProjectObject.asp">Project</A> 
+                  (en inglés), permiten comprobar si se ha definido una variable 
+                  (<A 
+                  href="http://msdn.microsoft.com/library/en-us/vsintro7/html/vxproVariableExistsProperty.asp">VariableExists</A> 
+                  (en inglés)), establecer una variable para guardarla con el 
+                  archivo del proyecto (<A 
+                  href="http://msdn.microsoft.com/library/en-us/vsintro7/html/vxproVariablePersistsProperty.asp">VariablePersists</A> 
+                  (en inglés)) y recuperar o establecer el valor de dicha 
+                  variable (<A 
+                  href="http://msdn.microsoft.com/library/en-us/vsintro7/html/vxproVariableValueProperty.asp">VariableValue</A> 
+                  (en inglés)). Posteriormente, se agrega un valor persistente 
+                  al código XML del archivo del proyecto, como se muestra a 
+                  continuación:</P><PRE class=code><PRE class=code><FONT color=#000000></FONT><FONT color=#0000ff>&lt;</FONT><FONT color=#800000>UserProperties </FONT><FONT color=#ff0000>Themed </FONT><FONT color=#0000ff>= "TRUE" /&gt;</FONT>
+</PRE>
+</PRE>
+                  <P>Mediante estas funciones y un nombre de variable "Themed", 
+                  que puede ser cualquier valor de tipo cadena, creé tres 
+                  procedimientos para el complemento: IsProjectThemed, 
+                  TurnProjectThemingOn y TurnProjectThemingOff (que no aparece 
+                  aquí para ahorrar espacio, pues es básicamente igual que 
+                  TurnProjectThemingOn).</P><PRE class=code><PRE class=code><FONT color=#000000>
+</FONT><FONT color=#0000ff>Private Function </FONT><FONT color=#000000>IsProjectThemed _
+        (</FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>proj </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.Project) </FONT><FONT color=#0000ff>As Boolean
+    If Not </FONT><FONT color=#000000>proj </FONT><FONT color=#0000ff>Is Nothing Then
+        Try
+            With </FONT><FONT color=#000000>proj.Globals
+                </FONT><FONT color=#0000ff>If </FONT><FONT color=#000000>.VariableExists(variableName) </FONT><FONT color=#0000ff>Then
+                    Return </FONT><FONT color=#000000>(.VariableValue(variableName) = "TRUE")
+                </FONT><FONT color=#0000ff>Else
+                    </FONT><FONT color=#008000>'Éste es básicamente el caso predeterminado
+                    </FONT><FONT color=#0000ff>Return False
+                End If
+            End With
+        Catch </FONT><FONT color=#000000>e </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>Exception
+            </FONT><FONT color=#0000ff>Return False
+        End Try
+    End If
+End Function
+
+Private Sub </FONT><FONT color=#000000>TurnProjectThemingOn()
+    </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>selProject </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.Project _
+        = GetCurrentlySelectedProject()
+    </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>projectGlobals </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.Globals
+    </FONT><FONT color=#0000ff>If Not </FONT><FONT color=#000000>selProject </FONT><FONT color=#0000ff>Is Nothing Then
+        </FONT><FONT color=#000000>projectGlobals = selProject.Globals
+        </FONT><FONT color=#0000ff>With </FONT><FONT color=#000000>projectGlobals
+            </FONT><FONT color=#0000ff>If </FONT><FONT color=#000000>.VariableExists(variableName) </FONT><FONT color=#0000ff>Then
+                If CStr</FONT><FONT color=#000000>(.VariableValue(variableName)) = "FALSE" </FONT><FONT color=#0000ff>Then
+                    </FONT><FONT color=#000000>.VariableValue(variableName) = "TRUE"
+                </FONT><FONT color=#0000ff>End If
+            Else
+                </FONT><FONT color=#000000>.VariableValue(variableName) = "TRUE"
+                .VariablePersists(variableName) = </FONT><FONT color=#0000ff>True
+            End If
+        End With
+    End If
+End Sub
+</FONT>
+</PRE>
+</PRE>
+                  <P>Una vez escritas las funciones <B>IsProjectThemed()</B> y 
+                  <B>IsProjectSelected()</B>, pude escribir un procedimiento que 
+                  actualizara la visibilidad de los dos elementos de menú. Este 
+                  procedimiento, <B>UpdateUI</B>, oculta los elementos de menú a 
+                  menos que se seleccione un proyecto y muestra el elemento de 
+                  menú <B>Turn Theme Support Off</B> si el proyecto ya tiene la 
+                  apariencia del tema o <B>Turn Theme Support On</B> en caso 
+                  contrario.</P><PRE class=code><PRE class=code><FONT color=#000000>
+</FONT><FONT color=#0000ff>Private Sub </FONT><FONT color=#000000>UpdateUI()
+    </FONT><FONT color=#0000ff>If </FONT><FONT color=#000000>IsProjectSelected() </FONT><FONT color=#0000ff>Then
+        Dim </FONT><FONT color=#000000>selProject </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.Project _
+            = GetCurrentlySelectedProject()
+        </FONT><FONT color=#0000ff>If </FONT><FONT color=#000000>IsProjectThemed(selProject) </FONT><FONT color=#0000ff>Then
+            </FONT><FONT color=#000000>onButton.Visible = </FONT><FONT color=#0000ff>False
+            </FONT><FONT color=#000000>offButton.Visible = </FONT><FONT color=#0000ff>True
+        Else
+            </FONT><FONT color=#000000>onButton.Visible = </FONT><FONT color=#0000ff>True
+            </FONT><FONT color=#000000>offButton.Visible = </FONT><FONT color=#0000ff>False
+        End If
+    Else
+        </FONT><FONT color=#000000>onButton.Visible = </FONT><FONT color=#0000ff>False
+        </FONT><FONT color=#000000>offButton.Visible = </FONT><FONT color=#0000ff>False
+    End If
+End Sub
+</FONT>
+</PRE>
+</PRE>
+                  <H3 class=dtH1>Control de eventos del IDE</H3>
+                  <P>El modelo de objetos de Visual Studio presenta una gran 
+                  variedad de eventos, todos ellos disponibles mediante los 
+                  miembros de la clase <B>Events</B>. Para mostrar y ocultar los 
+                  elementos de menú, seleccioné <A 
+                  href="http://msdn.microsoft.com/library/en-us/vsintro7/html/vxlrfOnChangeEvent.asp">Events.SelectionEvents.OnChange</A> 
+                  (en inglés), que se activa siempre que cambia el elemento 
+                  actualmente seleccionado en Visual Studio. Para detectar este 
+                  evento, creé una variable miembro en la clase 
+                  <B>ThemeSupport</B> (<B>selEvents</B>) del tipo 
+                  <B>SelectionEvents</B> y declaré <B>WithEvents</B>. Una vez 
+                  declarada esta variable, se pueden utilizar los menús 
+                  desplegables en el IDE para crear un controlador para el 
+                  evento <B>OnChange</B>.</P><PRE class=code><PRE class=code><FONT color=#000000>
+</FONT><FONT color=#0000ff>Private WithEvents </FONT><FONT color=#000000>selEvents </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.SelectionEvents
+
+</FONT><FONT color=#0000ff>Private Sub </FONT><FONT color=#000000>selEvents_OnChange() </FONT><FONT color=#0000ff>Handles </FONT><FONT color=#000000>selEvents.OnChange
+    UpdateUI()
+</FONT><FONT color=#0000ff>End Sub
+</FONT>
+</PRE></PRE>
+                  <P>Sin embargo, para llamar a este controlador de evento 
+                  necesitaba asegurarme de que la variable miembro 
+                  <B>selEvents</B> se inicializara con el objeto real 
+                  <B>DTE.Events.SelectionEvents</B> de Visual Studio .NET. 
+                  Puesto que en realidad voy a capturar eventos de selección, 
+                  ventana y <B>Build</B>, configuraré las tres variables miembro 
+                  de los eventos en una rutina denominada <B>SetupEvents</B>, a 
+                  la que se llamará desde el constructor de la clase 
+                  <B>ThemeSupport</B>.</P><PRE class=code><PRE class=code><FONT color=#000000></FONT><FONT color=#0000ff>Private Sub </FONT><FONT color=#000000>SetupEvents()
+    selEvents = hostApplication.Events.SelectionEvents
+    buildEvents = hostApplication.Events.BuildEvents
+    winEvents = hostApplication.Events.WindowEvents
+</FONT><FONT color=#0000ff>End Sub
+</FONT>
+</PRE>
+</PRE>
+                  <H3 class=dtH1>Respuesta a la selección de elementos de 
+                  menú</H3>
+                  <P>Después de haber escrito el código para determinar qué 
+                  elemento de menú debe estar visible, así como para mostrar y 
+                  ocultar dichos elementos adecuadamente, pasaremos al código 
+                  real que se utilizará cuando se seleccione uno de estos 
+                  elementos de menú. Cada elemento se declara como 
+                  <B>WithEvents</B> dentro de la clase <B>ThemeSupport</B>, por 
+                  tanto, es relativamente fácil agregar código para cada 
+                  elemento en el evento <B>Click</B>. Ahora que las rutinas 
+                  <B>TurnProjectThemingOn</B> y <B>TurnProjectThemingOff</B> 
+                  están creadas (como se indicó anteriormente), el código para 
+                  estos dos eventos <B>Click</B> es relativamente sencillo.</P><PRE class=code><PRE class=code><FONT color=#000000>
+</FONT><FONT color=#0000ff>Private Sub </FONT><FONT color=#000000>onButton_Click( _
+        </FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>Ctrl </FONT>       <FONT color=#0000ff>As </FONT><FONT color=#000000>CommandBarButton, _
+        </FONT><FONT color=#0000ff>ByRef </FONT><FONT color=#000000>CancelDefault </FONT><FONT color=#0000ff>As Boolean</FONT><FONT color=#000000>) _
+    </FONT><FONT color=#0000ff>Handles </FONT><FONT color=#000000>onButton.Click
+    TurnProjectThemingOn()
+    selEvents_OnChange()
+</FONT><FONT color=#0000ff>End Sub
+
+Private Sub </FONT><FONT color=#000000>offButton_Click( _
+        </FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>Ctrl </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>CommandBarButton, _
+        </FONT><FONT color=#0000ff>ByRef </FONT><FONT color=#000000>CancelDefault </FONT><FONT color=#0000ff>As Boolean</FONT><FONT color=#000000>) _
+    </FONT><FONT color=#0000ff>Handles </FONT><FONT color=#000000>offButton.Click
+    TurnProjectThemingOff()
+    selEvents_OnChange()
+</FONT><FONT color=#0000ff>End Sub
+</FONT>
+</PRE></PRE>
+                  <P>Después de haber escrito todo este código, sigo sin haber 
+                  agregado compatibilidad con el tema al proyecto. Todo lo que 
+                  he hecho ha sido crear algunos elementos de menú y agregar una 
+                  propiedad personalizada en el nivel del proyecto, dos pasos 
+                  que podrían aplicarse realmente a casi todos los proyectos de 
+                  complementos. Finalmente, después de este trabajo previo, ya 
+                  puedo comenzar con la programación específica de la 
+                  compatibilidad con el tema.</P>
+                  <H3 class=dtH1><A name=xpthemeaddin_topic4></A>Implementación 
+                  de las funciones para la compatibilidad con el tema</H3>
+                  <P>Para resumir brevemente, he configurado una propiedad 
+                  denominada "Themed" en el nivel del proyecto para agregar 
+                  compatibilidad con el tema y, si esa propiedad está 
+                  establecida en <B>True</B>, deseo que el proyecto adopte la 
+                  apariencia adecuada de Windows XP. Para controlar la 
+                  apariencia de XP copiaré un archivo de manifiesto en el 
+                  directorio de generación, asegurándome que la propiedad 
+                  <B>FlatStyle</B> esté establecida correctamente para los 
+                  controles de Windows Forms.</P>
+                  <H3 class=dtH1>Copia del archivo de manifiesto</H3>
+                  <P>Podría crear el archivo de manifiesto sobre la marcha en 
+                  tiempo de ejecución, escribiendo el texto necesario en un 
+                  archivo, aunque un enfoque más recomendable es utilizar un 
+                  archivo real en disco como plantilla. El uso de un archivo 
+                  real permite cambiar dicho archivo si es necesario, cambiando 
+                  el archivo de manifiesto que producirá este complemento sin 
+                  tener que modificar el código. Se utilizará un archivo 
+                  Default.manifest que, supuestamente, debe estar ubicado en el 
+                  mismo directorio que la DLL del complemento. El proyecto de 
+                  instalación proporcionado se encargará de este paso si lo 
+                  utiliza para instalar el complemento. Dentro del manifiesto 
+                  predeterminado (que se muestra a continuación), he utilizado 
+                  marcadores de posición ("[APPLICATION_NAME]," 
+                  "[APPLICATION_DESCRIPTION]" y "[APPLICATION_VERSION]") para 
+                  los valores que son específicos de la aplicación.</P><PRE class=code><PRE class=code><FONT color=#000000></FONT><FONT color=#0000ff>&lt;?</FONT><FONT color=#800000>xml </FONT><FONT color=#ff0000>version</FONT><FONT color=#0000ff>="1.0" </FONT><FONT color=#ff0000>encoding</FONT><FONT color=#0000ff>="UTF-8" </FONT><FONT color=#ff0000>standalone</FONT><FONT color=#0000ff>="yes"?&gt;
+&lt;</FONT><FONT color=#800000>assembly </FONT><FONT color=#ff00ff>
+    </FONT><FONT color=#ff0000>xmlns</FONT><FONT color=#0000ff>="urn:schemas-microsoft-com:asm.v1" </FONT><FONT color=#ff00ff>
+    </FONT><FONT color=#ff0000>manifestVersion</FONT><FONT color=#0000ff>="1.0"&gt; </FONT><FONT color=#000000>
+</FONT><FONT color=#0000ff>&lt;</FONT><FONT color=#800000>assemblyIdentity </FONT><FONT color=#ff00ff>
+    </FONT><FONT color=#ff0000>version</FONT><FONT color=#0000ff>="[APPLICATION_VERSION]" </FONT><FONT color=#ff00ff>
+    </FONT><FONT color=#ff0000>processorArchitecture</FONT><FONT color=#0000ff>="X86" </FONT><FONT color=#ff00ff>
+    </FONT><FONT color=#ff0000>name</FONT><FONT color=#0000ff>="[APPLICATION_NAME]"
+    </FONT><FONT color=#ff0000>type</FONT><FONT color=#0000ff>="win32" /&gt; </FONT><FONT color=#000000>
+</FONT><FONT color=#0000ff>&lt;</FONT><FONT color=#800000>description</FONT><FONT color=#0000ff>&gt;</FONT><FONT color=#000000>[APPLICATION_DESCRIPTION]</FONT><FONT color=#0000ff>&lt;/</FONT><FONT color=#800000>description</FONT><FONT color=#0000ff>&gt; </FONT><FONT color=#000000>
+</FONT><FONT color=#0000ff>&lt;</FONT><FONT color=#800000>dependency</FONT><FONT color=#0000ff>&gt; </FONT><FONT color=#000000>
+    </FONT><FONT color=#0000ff>&lt;</FONT><FONT color=#800000>dependentAssembly</FONT><FONT color=#0000ff>&gt; </FONT><FONT color=#000000>
+        </FONT><FONT color=#0000ff>&lt;</FONT><FONT color=#800000>assemblyIdentity </FONT><FONT color=#ff00ff>
+            </FONT><FONT color=#ff0000>type</FONT><FONT color=#0000ff>="win32" </FONT><FONT color=#ff00ff>
+            </FONT><FONT color=#ff0000>name</FONT><FONT color=#0000ff>="Microsoft.Windows.Common-Controls" </FONT><FONT color=#ff00ff>
+            </FONT><FONT color=#ff0000>version</FONT><FONT color=#0000ff>="6.0.0.0" </FONT><FONT color=#ff00ff>
+            </FONT><FONT color=#ff0000>processorArchitecture</FONT><FONT color=#0000ff>="X86" </FONT><FONT color=#ff00ff>
+            </FONT><FONT color=#ff0000>publicKeyToken</FONT><FONT color=#0000ff>="6595b64144ccf1df" </FONT><FONT color=#ff00ff>
+            </FONT><FONT color=#ff0000>language</FONT><FONT color=#0000ff>="*" /&gt; </FONT><FONT color=#000000>
+    </FONT><FONT color=#0000ff>&lt;/</FONT><FONT color=#800000>dependentAssembly</FONT><FONT color=#0000ff>&gt; </FONT><FONT color=#000000>
+</FONT><FONT color=#0000ff>&lt;/</FONT><FONT color=#800000>dependency</FONT><FONT color=#0000ff>&gt; </FONT><FONT color=#000000>
+</FONT><FONT color=#0000ff>&lt;/</FONT><FONT color=#800000>assembly</FONT><FONT color=#0000ff>&gt;
+</FONT>
+</PRE>
+</PRE>
+                  <P>En el momento de la generación, cuando copie sobre el 
+                  archivo de manifiesto, reemplazaré estos marcadores de 
+                  posición por los valores reales de mi aplicación. La copia y 
+                  reemplazo de cadenas en el manifiesto está encapsulada en el 
+                  procedimiento <B>CopyManifest</B> del código, al que se llama 
+                  en respuesta a un evento <B>Build</B> de Visual Studio (<A 
+                  href="http://msdn.microsoft.com/library/en-us/vsintro7/html/vxurfOnBuildProjConfigDoneEvent.asp">OnBuildProjConfigDone</A> 
+                  (en inglés)).</P><PRE class=code><PRE class=code><FONT color=#000000>
+</FONT><FONT color=#0000ff>Private Sub </FONT><FONT color=#000000>buildEvents_OnBuildProjConfigDone( _
+        </FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>Project </FONT><FONT color=#0000ff>As String</FONT><FONT color=#000000>, _
+        </FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>ProjectConfig </FONT><FONT color=#0000ff>As String</FONT><FONT color=#000000>, _
+        </FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>Platform </FONT><FONT color=#0000ff>As String</FONT><FONT color=#000000>, _
+        </FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>SolutionConfig </FONT><FONT color=#0000ff>As String</FONT><FONT color=#000000>, _
+        </FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>Success </FONT><FONT color=#0000ff>As Boolean</FONT><FONT color=#000000>) _
+    </FONT><FONT color=#0000ff>Handles </FONT><FONT color=#000000>buildEvents.OnBuildProjConfigDone
+
+    </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>proj </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.Project
+    proj = hostApplication.Solution.Projects.Item(Project)
+    </FONT><FONT color=#0000ff>If Not </FONT><FONT color=#000000>proj </FONT><FONT color=#0000ff>Is Nothing Then
+        If </FONT><FONT color=#000000>IsProjectThemed(proj) </FONT><FONT color=#0000ff>Then
+            Dim </FONT><FONT color=#000000>assemblyFilePath </FONT><FONT color=#0000ff>As String
+            Dim </FONT><FONT color=#000000>projectFilePath </FONT><FONT color=#0000ff>As String
+            Dim </FONT><FONT color=#000000>outputFilePath </FONT><FONT color=#0000ff>As String
+            Dim </FONT><FONT color=#000000>outputFileName </FONT><FONT color=#0000ff>As String
+            Dim </FONT><FONT color=#000000>manifestFilePath </FONT><FONT color=#0000ff>As String
+            Dim </FONT><FONT color=#000000>targetFilePath </FONT><FONT color=#0000ff>As String
+            Dim </FONT><FONT color=#000000>config </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.Configuration
+
+            projectFilePath = _
+            </FONT><FONT color=#0000ff>CStr</FONT><FONT color=#000000>(proj.Properties.Item("FullPath").Value)
+            outputFileName = _
+                </FONT><FONT color=#0000ff>CStr</FONT><FONT color=#000000>(proj.Properties.Item("OutputFileName").Value)
+
+            </FONT><FONT color=#0000ff>If </FONT><FONT color=#000000>IO.File.Exists(projectFilePath + "app.manifest") </FONT><FONT color=#0000ff>Then
+                </FONT><FONT color=#000000>manifestFilePath = projectFilePath + "app.manifest"
+            </FONT><FONT color=#0000ff>Else
+                </FONT><FONT color=#000000>assemblyFilePath _
+                    = </FONT><FONT color=#0000ff>Assembly</FONT><FONT color=#000000>.GetExecutingAssembly.Location
+                manifestFilePath = _
+                    Path.Combine( _
+                        Path.GetDirectoryName(assemblyFilePath), _
+                        "default.manifest")
+            </FONT><FONT color=#0000ff>End If
+
+            </FONT><FONT color=#000000>config = _
+                proj.ConfigurationManager.Item( _
+                    ProjectConfig, Platform)
+            outputFilePath = _
+                </FONT><FONT color=#0000ff>CStr</FONT><FONT color=#000000>(config.Properties.Item("OutputPath").Value)
+
+            </FONT><FONT color=#0000ff>If Not </FONT><FONT color=#000000>Path.IsPathRooted(outputFilePath) </FONT><FONT color=#0000ff>Then
+                </FONT><FONT color=#008000>'Ruta relativa de acceso al directorio del proyecto
+                </FONT><FONT color=#000000>outputFilePath = _
+                    Path.Combine(projectFilePath, outputFilePath)
+            </FONT><FONT color=#0000ff>End If
+
+            </FONT><FONT color=#000000>outputFileName = Path.Combine(outputFilePath, outputFileName)
+            targetFilePath = outputFileName + ".manifest"
+            CopyManifest(proj, _
+                manifestFilePath, _
+                targetFilePath, _
+                outputFileName)
+        </FONT><FONT color=#0000ff>End If
+    End If
+End Sub
+
+Private Sub </FONT><FONT color=#000000>CopyManifest(</FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>proj </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.Project, _
+        </FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>manifestPath </FONT><FONT color=#0000ff>As String</FONT><FONT color=#000000>, _
+        </FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>outputPath </FONT><FONT color=#0000ff>As String</FONT><FONT color=#000000>, _
+        </FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>outputFilePath </FONT><FONT color=#0000ff>As String</FONT><FONT color=#000000>)
+
+    </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>manifest </FONT><FONT color=#0000ff>As String
+    Dim </FONT><FONT color=#000000>manifestStream </FONT><FONT color=#0000ff>As New </FONT><FONT color=#000000>StreamReader(manifestPath)
+    </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>outputStream </FONT><FONT color=#0000ff>As New </FONT><FONT color=#000000>StreamWriter(outputPath, </FONT><FONT color=#0000ff>False</FONT><FONT color=#000000>)
+
+    manifest = manifestStream.ReadToEnd
+    manifestStream.Close()
+
+    </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>myFileVersionInfo </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>FileVersionInfo = _
+        FileVersionInfo.GetVersionInfo(outputFilePath)
+
+    </FONT><FONT color=#0000ff>With </FONT><FONT color=#000000>myFileVersionInfo
+        </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>appDescription </FONT><FONT color=#0000ff>As String </FONT><FONT color=#000000>= .Comments
+        </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>appName </FONT><FONT color=#0000ff>As String </FONT><FONT color=#000000>= .FileDescription
+        </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>appVersion </FONT><FONT color=#0000ff>As String
+        </FONT><FONT color=#000000>appVersion = </FONT><FONT color=#0000ff>String</FONT><FONT color=#000000>.Format("{0}.{1}.{2}.{3}", _
+            .FileMajorPart, .FileMinorPart, _
+            .FileBuildPart, .FilePrivatePart)
+        manifest = _
+            manifest.Replace( _
+                "[APPLICATION_NAME]", appName)
+        manifest = _
+            manifest.Replace( _
+                "[APPLICATION_DESCRIPTION]", appDescription)
+        manifest = _
+            manifest.Replace( _
+                "[APPLICATION_VERSION]", appVersion)
+    </FONT><FONT color=#0000ff>End With
+    </FONT><FONT color=#000000>outputStream.Write(manifest)
+    outputStream.Close()
+</FONT><FONT color=#0000ff>End Sub
+
+</FONT>
+</PRE></PRE>
+                  <P>El trabajo realizado en el evento <B>Build</B> se ocupa de 
+                  la copia y personalización del manifiesto, aunque algunos 
+                  controles sólo adoptarán la apariencia de Windows XP si su 
+                  propiedad <B>FlatStyle</B> está establecida en <B>System</B>. 
+                  Para que sea aún más fácil crear aplicaciones XP, he agregado 
+                  alguna funcionalidad adicional al complemento, que establecerá 
+                  un estilo <B>FlatStyle</B> para el control correctamente en 
+                  cuanto lo agregue al formulario.</P>
+                  <H3 class=dtH1>Establecimiento de propiedades de los 
+                  controles</H3>
+                  <P>La dificultad para establecer la propiedad <B>FlatStyle</B> 
+                  de los controles radica en detectar el evento que se produce 
+                  cuando se agrega un control. La biblioteca de extensibilidad 
+                  de Visual Studio, que me ha proporcionado la mayor parte de 
+                  objetos y eventos utilizados hasta el momento, no ofrece 
+                  acceso directo a los eventos que se producen en el diseñador 
+                  de Windows Forms. Afortunadamente, las clases <A 
+                  href="http://msdn.microsoft.com/library/en-us/cpref/html/frlrfSystemComponentModelDesign.asp">System.ComponentModel.Design</A> 
+                  (en inglés) de .NET Framework presentan la funcionalidad que 
+                  necesito. En la creación y cierre de ventanas en el IDE, es 
+                  posible interceptar cada ventana y convertirlas en objetos <A 
+                  href="http://msdn.microsoft.com/library/en-us/cpref/html/frlrfSystemComponentModelDesignIDesignerHostClassTopic.asp">IDesignerHost</A> 
+                  (en inglés).</P><PRE class=code><PRE class=code><FONT color=#000000>
+</FONT><FONT color=#0000ff>Private Sub </FONT><FONT color=#000000>winEvents_WindowCreated(</FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>Window </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.Window) _
+        </FONT><FONT color=#0000ff>Handles </FONT><FONT color=#000000>winEvents.WindowCreated
+    </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>host </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>IDesignerHost _
+        = </FONT><FONT color=#0000ff>CType</FONT><FONT color=#000000>(Window.Object, IDesignerHost)
+    </FONT><FONT color=#0000ff>If Not </FONT><FONT color=#000000>host </FONT><FONT color=#0000ff>Is Nothing Then
+        Dim </FONT><FONT color=#000000>ccs </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>IComponentChangeService
+        ccs = host.GetService(</FONT><FONT color=#0000ff>GetType</FONT><FONT color=#000000>(IComponentChangeService))
+        </FONT><FONT color=#0000ff>AddHandler </FONT><FONT color=#000000>ccs.ComponentAdded, _
+            </FONT><FONT color=#0000ff>AddressOf Me</FONT><FONT color=#000000>.ccsEvents_ComponentAdded
+    </FONT><FONT color=#0000ff>End If
+End Sub
+Private Sub </FONT><FONT color=#000000>winEvents_WindowClosing(</FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>Window </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>EnvDTE.Window) _
+        </FONT><FONT color=#0000ff>Handles </FONT><FONT color=#000000>winEvents.WindowClosing
+    </FONT><FONT color=#0000ff>Dim </FONT><FONT color=#000000>host </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>IDesignerHost _
+        = </FONT><FONT color=#0000ff>CType</FONT><FONT color=#000000>(Window.Object, IDesignerHost)
+    </FONT><FONT color=#0000ff>If Not </FONT><FONT color=#000000>host </FONT><FONT color=#0000ff>Is Nothing Then
+        Dim </FONT><FONT color=#000000>ccs </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>IComponentChangeService
+        ccs = host.GetService(</FONT><FONT color=#0000ff>GetType</FONT><FONT color=#000000>(IComponentChangeService))
+        </FONT><FONT color=#0000ff>RemoveHandler </FONT><FONT color=#000000>ccs.ComponentAdded, _
+            </FONT><FONT color=#0000ff>AddressOf Me</FONT><FONT color=#000000>.ccsEvents_ComponentAdded
+    </FONT><FONT color=#0000ff>End If
+End Sub
+</FONT>
+</PRE>
+</PRE>
+                  <P>Con el método <A 
+                  href="http://msdn.microsoft.com/library/en-us/cpref/html/frlrfSystemComponentModelComponentClassGetServiceTopic.asp">GetService</A> 
+                  (en inglés) de la interfaz <B>IDesignerHost</B>, se puede 
+                  agregar un controlador de evento que responda al evento <A 
+                  href="http://msdn.microsoft.com/library/en-us/cpref/html/frlrfSystemComponentModelDesignIComponentChangeServiceClassComponentAddedTopic.asp">ComponentAdded</A> 
+                  (en inglés) de la interfaz <A 
+                  href="http://msdn.microsoft.com/library/en-us/cpref/html/frlrfSystemComponentModelDesignIComponentChangeServiceClassTopic.asp">IComponentChangeService</A> 
+                  (en inglés). Posteriormente, cada vez que se agregue un 
+                  componente a un formulario, se llamará al controlador y podré 
+                  establecer la propiedad <B>FlatStyle</B> adecuadamente.</P><PRE class=code><PRE class=code><FONT color=#000000></FONT><FONT color=#0000ff>Private Sub </FONT><FONT color=#000000>ccsEvents_ComponentAdded(</FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>sender </FONT><FONT color=#0000ff>As Object</FONT><FONT color=#000000>, _
+    </FONT><FONT color=#0000ff>ByVal </FONT><FONT color=#000000>e </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>ComponentEventArgs)
+    </FONT><FONT color=#0000ff>Try
+        Dim </FONT><FONT color=#000000>ctl </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>Control
+        ctl = </FONT><FONT color=#0000ff>CType</FONT><FONT color=#000000>(e.Component, Control)
+        </FONT><FONT color=#0000ff>If Not </FONT><FONT color=#000000>ctl </FONT><FONT color=#0000ff>Is Nothing Then
+            Dim </FONT><FONT color=#000000>pd </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>PropertyDescriptor
+
+            pd = TypeDescriptor.GetProperties(ctl).Item("FlatStyle")
+            </FONT><FONT color=#0000ff>If Not </FONT><FONT color=#000000>pd </FONT><FONT color=#0000ff>Is Nothing Then
+                If </FONT><FONT color=#000000>pd.PropertyType.Equals(</FONT><FONT color=#0000ff>GetType</FONT><FONT color=#000000>(FlatStyle)) </FONT><FONT color=#0000ff>Then
+                    </FONT><FONT color=#000000>pd.SetValue(ctl, FlatStyle.System)
+                </FONT><FONT color=#0000ff>End If
+            End If
+        End If
+    Catch </FONT><FONT color=#000000>ex </FONT><FONT color=#0000ff>As </FONT><FONT color=#000000>Exception
+        </FONT><FONT color=#008000>' Es posible que un control tenga una propiedad 
+        ' denominada FlatStyle que no sea la implementación
+        ' "estándar". Por tanto, si la asignación de la propiedad 
+        ' falla, deseo ignorarla.
+        </FONT><FONT color=#000000>Debug.WriteLine(ex.Message)
+    </FONT><FONT color=#0000ff>End Try
+End Sub
+</FONT>
+</PRE></PRE>
+                  <P>Observe que esta implementación deja sin resolver algunos 
+                  problemas relativos al establecimiento de propiedades, como 
+                  por ejemplo: 
+                  <UL type=disc>
+                    <LI>¿Qué ocurre con los controles agregados cuando la 
+                    compatibilidad con el tema estaba establecida en <B>Off</B>? 
+
+                    <LI>¿Qué sucede al activar la compatibilidad? ¿Cambia la 
+                    propiedad <B>FlatStyle</B> a otro estado? </LI></UL>
+                  <P>No tengo una respuesta exacta para ninguna de estas 
+                  cuestiones; siempre es posible revisar el proyecto completo y 
+                  cambiar todos los controles, aunque tal vez no resulte 
+                  conveniente. Con los archivos de manifiesto ocurre algo 
+                  parecido. Al desactivar la compatibilidad con el tema, el 
+                  archivo de manifiesto de una versión de compilación anterior 
+                  aún podría estar en el directorio de salida; sin embargo, 
+                  decidí no eliminarlo automáticamente. Por supuesto, es posible 
+                  abordar estos problemas de otra forma, sólo se trata de un 
+                  ejemplo, así que puede modificar el código como considere más 
+                  oportuno.</P>
+                  <H3 class=dtH1><A name=xpthemeaddin_topic5></A>Resumen</H3>
+                  <P>Si la aplicación se va a ejecutar en Windows XP, deseará 
+                  que tenga la apariencia propia de dicho sistema operativo, no 
+                  la de otras aplicaciones heredadas que podrían no ser 
+                  compatibles. Hacer que las aplicaciones Windows Forms adopten 
+                  la apariencia de XP no es complicado, aunque resulta fácil 
+                  olvidar el archivo de manifiesto o el valor correcto en alguno 
+                  de los controles. La creación de un complemento para Visual 
+                  Studio es una forma ideal para aumentar la productividad 
+                  propia y la del equipo; también puede ser una buena 
+                  herramienta para aplicar estándares de 
+              programación.</P></TD></TR></TBODY></TABLE><!--CP_START-->
+            <TABLE class=copy cellSpacing=0 cellPadding=0 width="100%" 
+              border=0><TBODY>
+              <TR>
+                <TD class=copy 
+                style="WIDTH: 100%; HEIGHT: 30px; BACKGROUND-COLOR: #ffffff" 
+                noWrap align=middle><SPAN class=copy 
+                  style="FONT: xx-small Verdana; CURSOR: hand; COLOR: #000000; TEXT-DECORATION: none">Ultima 
+                  actualización: Lunes, 13 de Enero de 2003 
+            </SPAN></TD></TR></TBODY></TABLE><!--CP_STOP--><!-- End: Content --></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR 
+style="OVERFLOW: hidden; LINE-HEIGHT: 1px" clear=all>
+<TABLE id=msviFooter cellSpacing=0 cellPadding=0 width="100%">
+  <TBODY>
+  <TR vAlign=bottom>
+    <TD id=msviFooter2 
+    style="FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#669AFF', gradientType='1')">
+      <DIV id=msviLocalFooter><NOBR><A 
+      href="http://go.microsoft.com/?linkid=317028" target=_top>Administre su 
+      perfil</A></NOBR><WBR></WBR></DIV>
+      <DIV id=msviGlobalFooter><SPAN dir=ltr>©2006 Microsoft Corporation. Todos 
+      los derechos reservados.&nbsp;</SPAN><NOBR><A 
+      href="http://www.microsoft.com/spain/misc/avisolegal.htm" 
+      target=_parent>Condiciones de uso</A> |</NOBR><WBR></WBR><NOBR><A 
+      href="http://www.microsoft.com/library/toolbar/3.0/trademarks/es-es.mspx" 
+      target=_top>Marcas registradas</A> |</NOBR><WBR></WBR><NOBR><A 
+      href="http://www.microsoft.com/info/es/privacy.mspx" 
+      target=_top>Declaración de Privacidad</A></NOBR></DIV></TD>
+    <TD width=105 bgColor=#669aff><IMG title="" height=29 alt=Microsoft 
+      src="D:\VSTUDIO.NET\Nueva carpeta\Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos\text(1).jpg" 
+      width=105 border=0></TD></TR></TBODY></TABLE>
+<SCRIPT language=javascript>        var msviFooter2;        if (document.getElementById)        {        msviFooter2 = document.getElementById("msviFooter2");        msviFooter2.style.filter = "";        }      </SCRIPT>
+
+<TABLE height=58 cellSpacing=0 cellPadding=0 width="100%">
+  <TBODY>
+  <TR vAlign=top>
+    <TD>
+      <DIV style="WIDTH: 200px"></DIV></TD>
+    <TD 
+    style="FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#669AFF', gradientType='1')" 
+    width="100%"></TD></TR></TBODY></TABLE>
+<DIV style="DISPLAY: none">
+<SCRIPT type=text/javascript>var gDomain="m.webtrends.com";var gDcsId="dcsjwb9vb00000c932fd0rjc7_5p3t";var gFpc="WT_FPC";if(document.cookie.indexOf(gFpc+"=")==-1){document.write("<SCR"+"IPT TYPE='text/javascript' SRC='"+"http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/SCR"+"IPT>");}</SCRIPT>
+
+<SCRIPT 
+src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/wt.js" 
+type=text/javascript></SCRIPT>
+<NOSCRIPT><IMG height=1 
+src="Creación de un complemento de Visual Studio _NET para proporcionar compatibilidad con el tema de Windows XP_archivos/njs.gif" 
+width=1 border=0 name=DCSIMG></NOSCRIPT></DIV>
+<SCRIPT language=javascript>footerjs(document);</SCRIPT>
+</BODY></HTML>

@@ -1,0 +1,154 @@
+Dim alfa As New FrmEjercicioguia1
+        alfa.Show()
+Dim alfa As New FrmEjercicioguia2
+        alfa.Show()
+
+Me.Close()
+
+
+Dim ok As Boolean
+        ok = True
+        ok = False
+        If ok = True Then
+            MessageBox.Show("la variable es verdadera")
+        Else
+
+            MessageBox.Show("la variable es falsa")
+        End If
+
+
+Dim x As String
+        Dim t As Integer
+        If x = "curso" Then
+            If t = "123" Then
+                MessageBox.Show("hola")
+            End If
+            MessageBox.Show("no puede seguir")
+        End If
+
+
+Private Sub txtNombre_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtNombre.TextChanged
+        Dim nombre As String
+    End Sub
+
+    Private Sub txtContraseña_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtContraseña.TextChanged
+        Dim contraseña As Integer
+    End Sub
+
+    Private Sub cmdValidar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdValidar.Click
+        Dim nombre As String
+        Dim x As Integer
+        Dim llamar As New frmMenu
+        nombre = "curso"
+        x = "123"
+        If txtNombre.Text = nombre Then
+            If txtContraseña.Text = x Then
+                MessageBox.Show("Bienvenido")
+                llamar.Show()
+                Me.Finalize()
+            Else
+                MessageBox.Show("No puede iniciar sesion")
+                txtContraseña.Focus()
+                txtContraseña.Text = ("")
+                txtNombre.Focus()
+                txtNombre.Text = ("")
+            End If
+        Else
+            MessageBox.Show("No puede iniciar sesion")
+            txtNombre.Focus()
+            txtNombre.Text = ("")
+            txtContraseña.Focus()
+            txtContraseña.Text = ("")
+        End If
+    End Sub
+
+    Private Sub cmdCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdCerrar.Click
+        Me.Close()
+    End Sub
+End Class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

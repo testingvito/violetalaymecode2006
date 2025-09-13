@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "login", "login.vbproj", "{8CE20279-C99A-4BBB-8339-055739CF1E5E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{8CE20279-C99A-4BBB-8339-055739CF1E5E}.Debug.ActiveCfg = Debug|.NET
+		{8CE20279-C99A-4BBB-8339-055739CF1E5E}.Debug.Build.0 = Debug|.NET
+		{8CE20279-C99A-4BBB-8339-055739CF1E5E}.Release.ActiveCfg = Release|.NET
+		{8CE20279-C99A-4BBB-8339-055739CF1E5E}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

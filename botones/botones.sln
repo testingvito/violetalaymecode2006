@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "botones", "botones.vbproj", "{B3BC449D-01B0-44A4-AA8B-00401A50EB91}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{B3BC449D-01B0-44A4-AA8B-00401A50EB91}.Debug.ActiveCfg = Debug|.NET
+		{B3BC449D-01B0-44A4-AA8B-00401A50EB91}.Debug.Build.0 = Debug|.NET
+		{B3BC449D-01B0-44A4-AA8B-00401A50EB91}.Release.ActiveCfg = Release|.NET
+		{B3BC449D-01B0-44A4-AA8B-00401A50EB91}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
